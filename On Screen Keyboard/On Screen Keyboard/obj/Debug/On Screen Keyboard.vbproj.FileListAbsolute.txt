@@ -1,0 +1,10 @@
+C:\Users\Admin\Desktop\TrueFit\On Screen Keyboard\On Screen Keyboard\On Screen Keyboard\bin\Debug\On Screen Keyboard.exe.config
+C:\Users\Admin\Desktop\TrueFit\On Screen Keyboard\On Screen Keyboard\On Screen Keyboard\bin\Debug\On Screen Keyboard.exe
+C:\Users\Admin\Desktop\TrueFit\On Screen Keyboard\On Screen Keyboard\On Screen Keyboard\bin\Debug\On Screen Keyboard.pdb
+C:\Users\Admin\Desktop\TrueFit\On Screen Keyboard\On Screen Keyboard\On Screen Keyboard\bin\Debug\On Screen Keyboard.xml
+C:\Users\Admin\Desktop\TrueFit\On Screen Keyboard\On Screen Keyboard\On Screen Keyboard\obj\Debug\On_Screen_Keyboard.MainScreen.resources
+C:\Users\Admin\Desktop\TrueFit\On Screen Keyboard\On Screen Keyboard\On Screen Keyboard\obj\Debug\On_Screen_Keyboard.Resources.resources
+C:\Users\Admin\Desktop\TrueFit\On Screen Keyboard\On Screen Keyboard\On Screen Keyboard\obj\Debug\On Screen Keyboard.vbproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\TrueFit\On Screen Keyboard\On Screen Keyboard\On Screen Keyboard\obj\Debug\On Screen Keyboard.exe
+C:\Users\Admin\Desktop\TrueFit\On Screen Keyboard\On Screen Keyboard\On Screen Keyboard\obj\Debug\On Screen Keyboard.xml
+C:\Users\Admin\Desktop\TrueFit\On Screen Keyboard\On Screen Keyboard\On Screen Keyboard\obj\Debug\On Screen Keyboard.pdb
