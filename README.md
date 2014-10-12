@@ -36,7 +36,7 @@ IT Crowd
 
 Sample Output
 -------------
-D,R,R,#,D,D,L,#,S,U,U,U,R,#,D,D,R,R,R,#L,L,L#,D,R,R,#,U,U,U,L#
+D,R,R,#,D,D,L,#,S,U,U,U,R,#,D,D,R,R,R,#,L,L,L,#,D,R,R,#,U,U,U,L,#
 
 The Fine Print
 --------------
