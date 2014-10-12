@@ -22,7 +22,7 @@ namespace Keys.Core
 	///</remarks>
 	public class QwertyKeyboard : Keyboard
 	{
-		protected const string QwertyKeys = "12345567890QWERTYUIOPASDFGHJKLZXCVBNM";
+		protected const string QwertyKeys = "1234567890QWERTYUIOPASDFGHJKLZXCVBNM";
 		public QwertyKeyboard() : base(keys: QwertyKeys) { }
 	}
 }

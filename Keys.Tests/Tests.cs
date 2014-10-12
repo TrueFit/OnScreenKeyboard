@@ -124,6 +124,16 @@ namespace Keys.Tests
 		}
 
 		[Test]
+		public void TestQwertyKeyboard()
+		{
+			var input = "IT Crowd";
+			var output = "D,D,R,R,R,R,R,#,L,L,L,#,S,D,D,D,L,#,U,U,U,#,D,L,#,U,U,R,R,R,R,R,#,D,D,L,#";
+			var kb = new QwertyKeyboard();
+			var result = kb.GenerateCommands(input);
+			Assert.AreEqual(output, result);
+		}
+
+		[Test]
 		public void TestLayouts()
 		{
 			var input = "IT Crowd";

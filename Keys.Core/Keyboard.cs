@@ -66,7 +66,7 @@ namespace Keys.Core
 		public Keyboard(short? width = null, string keys = null, Position start = null)
 		{
 			this.Width = width ?? DEFAULT_WIDTH;
-			this.Keys = keys ?? DEFAULT_KEYS;
+			this.Keys = !String.IsNullOrEmpty(keys)? keys.ToUpper() : DEFAULT_KEYS;
 			this.Height = (short)(this.Keys.Length / this.Width);
 			this.CursorPosition = start ?? new Position();
 		}
