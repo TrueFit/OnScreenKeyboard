@@ -38,6 +38,9 @@ namespace Keys.Core
 			public const string Separator = ",";
 		}
 
+		/// <remarks>
+		/// instead of assuming that they are in alphabetical order, this allows us to build different keyboard layouts
+		/// </remarks>
 		protected const string DEFAULT_KEYS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 		public int GetCharPosition(char c)
 		{
@@ -45,9 +48,6 @@ namespace Keys.Core
 		} 
 		protected const short DEFAULT_WIDTH = 6;
 
-		/// <remarks>
-		/// instead of assuming that they are in alphabetical order, this allows us to build different keyboard layouts
-		/// </remarks>
 		public Keyboard(short width, string keys, short height, Position cursorPosition)
 		{
 			Width = width;
