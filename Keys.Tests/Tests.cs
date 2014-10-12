@@ -23,8 +23,6 @@ namespace Keys.Tests
 		public void TestBasicInput()
 		{
 			var input = "IT Crowd";
-			// Sample output in the problem set is wrong, missing comma after a couple of commands
-			// var output	= "D,R,R,#,D,D,L,#,S,U,U,U,R,#,D,D,R,R,R,#L,L,L#,D,R,R,#,U,U,U,L#";
 			var output		= "D,R,R,#,D,D,L,#,S,U,U,U,R,#,D,D,R,R,R,#,L,L,L,#,D,R,R,#,U,U,U,L,#";
 
 			var kb = new Keyboard();
@@ -42,6 +40,26 @@ namespace Keys.Tests
 			kb = new Keyboard();
 			result = kb.GenerateCommands(input);
 			Assert.AreEqual(output, result);
+		}
+
+		[Test]
+		public void TestCasing()
+		{
+			var input = "IT Crowd";
+			var output = "D,R,R,#,D,D,L,#,S,U,U,U,R,#,D,D,R,R,R,#,L,L,L,#,D,R,R,#,U,U,U,L,#";
+
+			var kb = new Keyboard();
+			var result = kb.GenerateCommands(input);
+			Assert.AreEqual(output, result);
+
+			kb = new Keyboard();
+			var result2 = kb.GenerateCommands(input.ToLower());
+			Assert.AreEqual(result, result2);
+
+			kb = new Keyboard();
+			result2 = kb.GenerateCommands(input.ToUpper());
+			Assert.AreEqual(result, result2);
+
 		}
 
 		[Test]
