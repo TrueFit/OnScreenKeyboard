@@ -25,7 +25,7 @@ namespace OnScreenKeyboard.Test
         [ExpectedException(typeof(InvalidCharacterException))]
         [TestCase("A movie name &$ For you")]
         [TestCase("Porky's")]
-        public void CommandParserTests_ShouldReturn_ExpectedEception(string input)
+        public void CommandParserTests_ShouldReturn_ExpectedException(string input)
         {
             // Arrange
             var keyboard = new OnScreenKeyboard.CommandParser();
