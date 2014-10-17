@@ -54,7 +54,7 @@
     <Compile Include="StringLiteralReader.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OnScreenKeyboard.csproj">
+    <ProjectReference Include="..\OnScreenKeyboard\OnScreenKeyboard.csproj">
       <Project>{96a53fff-8db5-4d9e-8d0d-03cdbf332dbd}</Project>
       <Name>OnScreenKeyboard</Name>
     </ProjectReference>

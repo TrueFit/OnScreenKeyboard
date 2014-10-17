@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnScreenKeyboard", "OnScreenKeyboard.csproj", "{96A53FFF-8DB5-4D9E-8D0D-03CDBF332DBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnScreenKeyboard", "OnScreenKeyboard\OnScreenKeyboard.csproj", "{96A53FFF-8DB5-4D9E-8D0D-03CDBF332DBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileInputExample", "..\FileInputExample\FileInputExample.csproj", "{0192BA47-0C6F-4F49-B541-BF332F85EB3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileInputExample", "FileInputExample\FileInputExample.csproj", "{0192BA47-0C6F-4F49-B541-BF332F85EB3C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnScreenKeyboard.Test", "OnScreenKeyboard.Test\OnScreenKeyboard.Test.csproj", "{2193237C-201A-4F5E-8A9F-BEB0C9158463}"
 EndProject
