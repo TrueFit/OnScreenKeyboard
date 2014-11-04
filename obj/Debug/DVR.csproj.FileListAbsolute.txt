@@ -1,0 +1,4 @@
+C:\wwwroot\DVR\bin\DVR.dll
+C:\wwwroot\DVR\bin\DVR.pdb
+C:\wwwroot\DVR\obj\Debug\DVR.dll
+C:\wwwroot\DVR\obj\Debug\DVR.pdb
