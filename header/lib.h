@@ -12,8 +12,12 @@
 /// <date>2014-11-15</date>
 /// <project>On Screen Keyboard</project>
 
+#include "../header/constants.h"
+
 #include <ctype.h>
+#include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 ///
@@ -21,10 +25,10 @@
 /// ----------------------------------------
 ///
 
-struct Position {
+typedef struct Position {
 	int x;
 	int y;
-};
+} Position;
 
 ///
 /// File reading
@@ -35,10 +39,11 @@ void openFile(FILE **fp, int argc, char **argv);
 void promptForFile(char *path);
 
 ///
-/// Parsing
+/// Parsing and calculations
 /// ----------------------------------------
 ///
 
+void calculatePosition(int *ascii, int length, FILE *outStream);
 void lineToASCII(char *line, int *ascii, int *length);
 
 #endif

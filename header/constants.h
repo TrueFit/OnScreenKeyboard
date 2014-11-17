@@ -11,6 +11,26 @@
 /// <project>On Screen Keyboard</project>
 
 ///
+/// Strings used throughout the program
+/// ----------------------------------------
+///
+
+#define LIB_ENTER_FILE "Please enter the input file path here: "
+#define LIB_FILE_OPENING_ERROR "The specified file does not exist or is not accessible.\n"
+#define LIB_NO_CHARACTERS "<line contains no characters>"
+#define LIB_NO_INPUT_FILE "An input file was not specified.\n"
+#define LIB_WARNING_CHARACTER_NOT_PRESENT "Warning: \"%c\" is not present on the keyboard, ignoring.\n"
+#define LIB_WARNING_UPPERCASE "Warning: \"%c\" was converted to uppercase.\n"
+
+#define MAIN_BEGINNING_ROUND "Beginning round"
+#define MAIN_COMPLETED "File completed"
+#define MAIN_DONE "Done"
+#define MAIN_PROGRAM_USAGE "Usage: %s [input file [output file]]\n"
+#define MAIN_PROGRAM_USAGE_INPUT " - You will be prompted for an input file, if one is not specified, or is missing.\n"
+#define MAIN_PROGRAM_USAGE_OUTPUT " - If an output file is not provided, output will be printed to the terminal.\n   NOTE: File output will override the existing contents of the text file.\n\n"
+#define MAIN_WELCOME "On-screen Keyboard Keystroke Movement:\n"
+
+///
 /// C definitions
 /// ----------------------------------------
 ///
@@ -36,13 +56,12 @@ typedef int bool;
 
 //ASCII codes: (0 - 9) => (48 - 57), and (A - Z) => (65 - 90)
 //Explictly written out for clarity
-char keyboard[X][Y] = {
-	{ 'A', 'B', 'C', 'D', 'E', 'F' }, // 65, 66, 67, 68, 69, 70
-	{ 'G', 'H', 'I', 'J', 'K', 'L' }, // 71, 72, 73, 74, 75, 76
-	{ 'M', 'N', 'O', 'P', 'Q', 'R' }, // 77, 78, 79, 80, 81, 82
-	{ 'S', 'T', 'U', 'V', 'W', 'X' }, // 83, 84, 85, 86, 87, 88
-	{ 'Y', 'Z', '0', '1', '2', '3' }, // 89, 90, 48, 49, 50, 51
-	{ '4', '5', '6', '7', '8', '9' }  // 52, 53, 54, 55, 56, 57
-};
+char keyboard[X][Y];
+
+//Pre-define the strings of possible movements, a space for time trade-off
+char down[5][11];
+char left[5][11];
+char right[5][11];
+char up[5][11];
 
 #endif
