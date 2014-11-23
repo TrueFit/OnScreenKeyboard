@@ -48,4 +48,3 @@ def DVRKeyPath(inputString):
 with open("onscreenkeyboard.txt") as commands:
   for line in commands:
     print DVRKeyPath(line)
-    
