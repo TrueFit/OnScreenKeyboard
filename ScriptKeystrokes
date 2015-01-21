@@ -1,0 +1,96 @@
+    public class ScriptKeystrokes
+    {
+        private readonly int SIZE = 6;
+        public string GenerateScript(string inputfilename)
+        {
+            StringBuilder output = new StringBuilder();
+            int pos = 0;
+            System.IO.StreamReader file;
+            try
+            {
+                file = new System.IO.StreamReader(inputfilename);
+            }
+            catch (Exception ex)
+            {
+                return "";
+            }
+            string line;
+            while ((line = file.ReadLine()) != null)
+            {//loop through each line in document
+                foreach (Char c in line)
+                {
+                    int charValue = FormatCharValue((int)c);//returns -1 through 35
+                    if (charValue == -1)
+                    {
+                        output.Append("S,");
+                    }
+                    else
+                    {
+                        getNextOutput(charValue, ref pos, ref output);
+                    }
+                }
+                //reset at first position for each new line
+                pos = 0;
+            }
+            string returnString = output.ToString();
+            return returnString.ToString().Remove(returnString.Length-1, 1);
+        }
+        private void getNextOutput(int charValue, ref int pos, ref StringBuilder output)
+        {
+            //modify the charValue so that it is relative to our current position
+            int targetPosY = charValue / SIZE;
+            int targetPosX = charValue % SIZE;
+
+            int currentPosY = pos / SIZE;
+            int currentPosX = pos % SIZE;
+
+            int relativeValue = charValue - pos;
+            while (currentPosY < targetPosY)
+            {
+                pos = pos + SIZE;
+                currentPosY++;
+                output.Append("D,");
+            }
+            while (currentPosX < targetPosX)
+            {
+                pos++;
+                currentPosX++;
+                output.Append("R,");
+            }
+            while (currentPosY > targetPosY)
+            {
+                pos = pos - SIZE;
+                currentPosY--;
+                output.Append("U,");
+            }
+            while (currentPosX > targetPosX)
+            {
+                pos--;
+                currentPosX--;
+                output.Append("L,");
+            }
+            output.Append("#,");
+        }
+        private  int FormatCharValue(int value)
+        {//returns a value between -1 and 35 representing 
+            //the virtual keyboard's configuration
+            if (value > 64 && value < 90)
+            {//Converts A-Z into a-z
+                value = value + 32;
+            }
+            if (value < (int)'0')
+            {//' ' or invalid character
+                return -1;
+            }
+            else if (value < (int)'9')
+            {//0-9
+                value = value - 48;
+            }
+            else
+            {//a-z
+                value = value - 97;
+            }
+            return value;
+        }
+
+    }
