@@ -1,0 +1,14 @@
+d:\documents\visual studio 2012\Projects\TrueFit OnScreenKeyboard\TrueFit OnScreenKeyboard\bin\Debug\TrueFit OnScreenKeyboard.exe.config
+d:\documents\visual studio 2012\Projects\TrueFit OnScreenKeyboard\TrueFit OnScreenKeyboard\bin\Debug\TrueFit OnScreenKeyboard.exe.manifest
+d:\documents\visual studio 2012\Projects\TrueFit OnScreenKeyboard\TrueFit OnScreenKeyboard\bin\Debug\TrueFit OnScreenKeyboard.application
+d:\documents\visual studio 2012\Projects\TrueFit OnScreenKeyboard\TrueFit OnScreenKeyboard\bin\Debug\TrueFit OnScreenKeyboard.exe
+d:\documents\visual studio 2012\Projects\TrueFit OnScreenKeyboard\TrueFit OnScreenKeyboard\bin\Debug\TrueFit OnScreenKeyboard.pdb
+d:\documents\visual studio 2012\Projects\TrueFit OnScreenKeyboard\TrueFit OnScreenKeyboard\bin\Debug\TrueFit OnScreenKeyboard.xml
+d:\documents\visual studio 2012\Projects\TrueFit OnScreenKeyboard\TrueFit OnScreenKeyboard\obj\Debug\TrueFit_OnScreenKeyboard.OnScreenKeyboard.resources
+d:\documents\visual studio 2012\Projects\TrueFit OnScreenKeyboard\TrueFit OnScreenKeyboard\obj\Debug\TrueFit_OnScreenKeyboard.Resources.resources
+d:\documents\visual studio 2012\Projects\TrueFit OnScreenKeyboard\TrueFit OnScreenKeyboard\obj\Debug\TrueFit OnScreenKeyboard.vbproj.GenerateResource.Cache
+d:\documents\visual studio 2012\Projects\TrueFit OnScreenKeyboard\TrueFit OnScreenKeyboard\obj\Debug\TrueFit OnScreenKeyboard.exe.manifest
+d:\documents\visual studio 2012\Projects\TrueFit OnScreenKeyboard\TrueFit OnScreenKeyboard\obj\Debug\TrueFit OnScreenKeyboard.application
+d:\documents\visual studio 2012\Projects\TrueFit OnScreenKeyboard\TrueFit OnScreenKeyboard\obj\Debug\TrueFit OnScreenKeyboard.exe
+d:\documents\visual studio 2012\Projects\TrueFit OnScreenKeyboard\TrueFit OnScreenKeyboard\obj\Debug\TrueFit OnScreenKeyboard.xml
+d:\documents\visual studio 2012\Projects\TrueFit OnScreenKeyboard\TrueFit OnScreenKeyboard\obj\Debug\TrueFit OnScreenKeyboard.pdb
