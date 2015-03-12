@@ -1,4 +1,4 @@
-Public Class OnScreenKeyboard
+﻿Public Class OnScreenKeyboard
 
     Private Sub OnScreenKeyboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Button_11.Focus()
