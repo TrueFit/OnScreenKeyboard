@@ -1,0 +1,61 @@
+﻿<!--Test Harness for the scripts necessary to route the DVR remote character selection based on the text file entered-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>DVR Remote Routing Test Harness</title>
+
+    <!--Include External Script File for Remote Layout-->
+    <script src="RemoteSetup.js" type="text/javascript"></script>
+
+    <!--Include External Script File to process routing based on a line of text-->
+    <script src="ProcessLine.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <h2 id="lblSelect"> Select File for Input:</h2>
+    <!--Setup tag to select the text file-->
+    <input type='file' accept='text/plain' onchange='openFile(event)'><br>
+   
+    <script>
+        //Setup the Remote Definition
+        var remoteArray = setupRemote();
+
+        //store the file and read the input
+        var openFile = function (event) {
+            var input = event.target;
+
+            var reader = new FileReader();
+            reader.onload = function () {
+                var text = reader.result;
+
+                //Split multiline files into single lines for processing
+                var lines = text.split(/[\r\n]+/g);
+
+                //Process each line for routing
+                for (var i = 0; i < lines.length; i++) {
+                    var strline = lines[i];
+
+                    //Call function to get Routing for the current line. srtOutput would provide input to another function in the real world but for purposes of the exercise I'll just output to the screen.
+                    var strOutput = processLine(strline, remoteArray);
+                    
+                    //Write Header Row on first line and output results to the screen.
+                    if (i == 0) {
+                        document.write("<h3>" + "File Output: " + "</h3></br>");
+                        document.write(strOutput.substring(0, strOutput.length - 1) + "</br>");
+
+                    } else {
+
+                        document.write(strOutput.substring(0, strOutput.length - 1) + "</br>");
+                    }
+                    
+                }
+            };
+            reader.readAsText(input.files[0]);
+        };
+    </script>
+</body>
+</html>
+
+
+
