@@ -42,11 +42,11 @@
                     //Write Header Row on first line and output results to the screen.
                     if (i == 0) {
                         document.write("<h3>" + "File Output: " + "</h3></br>");
-                        document.write(strOutput + "</br>");
+                        document.write(strOutput.substring(0, strOutput.length - 1) + "</br>");
 
                     } else {
 
-                        document.write(strOutput + "</br>");
+                        document.write(strOutput.substring(0, strOutput.length - 1) + "</br>");
                     }
                     
                 }

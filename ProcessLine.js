@@ -33,10 +33,7 @@ function processLine(strLine, aryRemote) {
             if (strLine[x] == " ") //it's a space
             {
                 strOutput += 'S';
-                //document.write("S,");
-                //document.write(" Start Col:" + startXAxisPos + ", Row:" + startYAxisPos + "<br/>");
-                //document.write(" Target Col:" + targetXAxisPos + ", Row:" + targetYAxisPos + "<br/>");
-
+               
             }
             else {
 
@@ -49,19 +46,13 @@ function processLine(strLine, aryRemote) {
                 //Store Target Coordinates returned from the function
                 var targetXAxisPos = targetCharPosition[0];
                 var targetYAxisPos = targetCharPosition[1];
-                //document.write(" Start Col:" + startXAxisPos + ", Row:" + startYAxisPos + "<br/>");
-                //document.write(" Target Col:" + targetXAxisPos + ", Row:" + targetYAxisPos + "<br/>");
-
-
-
-
+               
                 //Calc y-Axis Difference for horizontal movement. Should be a function.
                 if (targetYAxisPos > startYAxisPos) //going down!
                 {
                     //write a for loop to add to the movement string
                     for (var yd = targetYAxisPos - startYAxisPos; yd > 0; yd--) {
                         strOutput += 'D,';
-                        //document.write("D,");
                     }
                 }
                 if (startYAxisPos > targetYAxisPos) //going up!
@@ -69,7 +60,6 @@ function processLine(strLine, aryRemote) {
                     //write a for loop to add to the movement string
                     for (var yu = startYAxisPos - targetYAxisPos  ; yu > 0; yu--) {
                         strOutput += 'U,';
-                        //document.write("U,");
                     }
                 }
 
@@ -79,7 +69,6 @@ function processLine(strLine, aryRemote) {
                     //add rights to the movement string
                     for (var xr = targetXAxisPos - startXAxisPos; xr > 0; xr--) {
                         strOutput += 'R,';
-                        //document.write("R,");
                     }
                 }
                 else if (startXAxisPos > targetXAxisPos) //we're moving left
@@ -87,14 +76,13 @@ function processLine(strLine, aryRemote) {
                     //add lefts to the movement string
                     for (var xl = startXAxisPos - targetXAxisPos; xl > 0; xl--) {
                         strOutput += 'L,';
-                        //document.write("L,");
                     }
                 }
 
 
                 //Destination Achieved - Select Character at Position
                 strOutput += '#,';
-                //document.write("#,");
+              
             }
             //set new starting point to move from
             startXAxisPos = targetXAxisPos;
