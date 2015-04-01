@@ -44,11 +44,14 @@ pre {
 }
 
 #fileInput {
-	
+
 }
 
-/*#fileDisplayArea {
-  margin-top: 2em;
-  width: 100%;
-  overflow-x: auto;
-}*/
+table{
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+table td {
+	word-wrap:break-word;
+}

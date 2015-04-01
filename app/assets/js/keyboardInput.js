@@ -8,25 +8,17 @@ $(document).ready(function () {
 function getAllPaths(){
     var allLinesString = document.getElementById('fileDisplayArea').innerText;
     var arrayOfLines = allLinesString.split("\n");
-    
-
-    var arrayOfOutputs = [];
-    
-        // arrayOfOutputs.push(currentLineOutput);
-      
 
     $.each(arrayOfLines, function(index, currentLine){
         var currentLineOutput = getPath(currentLine);
         addRow(currentLine, currentLineOutput);
-
     })
-
-
-
-
-    // var pathDisplayArea = document.getElementById('pathDisplayArea');
-    // pathDisplayArea.innerText = result;
 }
+
+function clearTable(){
+    $('#display-table-rows').empty();
+}
+
 
 function addRow(input, output){
     var displayTable = $('#display-table-rows');

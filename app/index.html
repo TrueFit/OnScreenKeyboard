@@ -20,24 +20,32 @@
                     <input type="file" id="fileInput">
                 </div>
                 <pre id="fileDisplayArea"></pre>
-                <div>
-                    <button 
-                        id="get-path-button" 
-                        class="btn-success"
-                        
-                        onclick="getAllPaths()">
-                        Get Path(s)
-                    </button>
+                <div class="container-fluid">
+                    <div class="row">
+                        <button 
+                            id="get-path-button" 
+                            class="btn-success"
+                            onclick="getAllPaths()">
+                            Get Path(s)
+                        </button>
+                        <button
+                            id="clear-button"
+                            class="btn-success"
+                            onclick="clearTable()"
+                            style="margin-left:10px">
+                            Clear
+                        </button>
+                    </div>
                 </div>
                 
                 <!-- <pre id="pathDisplayArea"></pre> -->
                 <br>
 
                 <div id="display-table-div">
-                    <table id="display-table" class="table">
+                    <table id="display-table" class="table table-responsive">
                         <tr>
-                            <th>Input</th>
-                            <th>Output</th>
+                            <th width="20%">Input</th>
+                            <th width="80">Output</th>
 
                         </tr>
                         <tbody id="display-table-rows"></tbody>
