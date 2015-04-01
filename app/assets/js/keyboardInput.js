@@ -1,24 +1,27 @@
-$(document).ready(function () {
-   
-        
-   
-});
-
-
 function getAllPaths(){
     var allLinesString = document.getElementById('fileDisplayArea').innerText;
     var arrayOfLines = allLinesString.split("\n");
+    var illegalLines = [];
 
     $.each(arrayOfLines, function(index, currentLine){
-        var currentLineOutput = getPath(currentLine);
+        var currentLineOutput = "";
+
+        //check for illegal characters
+        if(/^[a-zA-Z0-9 ]*$/.test(currentLine) == false) {
+            var indexPlusone = index + 1;
+            currentLineOutput = 'Line ' + indexPlusone + ' contains illegal characters.';
+        }else {
+            currentLineOutput = getPath(currentLine);
+        }
+
         addRow(currentLine, currentLineOutput);
-    })
+        
+    });
 }
 
 function clearTable(){
     $('#display-table-rows').empty();
 }
-
 
 function addRow(input, output){
     var displayTable = $('#display-table-rows');
@@ -91,15 +94,8 @@ function getPath(input){
     //chop off the final comma
     result = result.substring(0, result.length - 1);
 
-
     return result;
 }
-
-
-
-
-
-//Helper Methods
 
 function getColumn(c) {
     var result = 0;
