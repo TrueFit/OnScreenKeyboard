@@ -6,8 +6,72 @@ $(document).ready(function () {
     });
 });
 
+
 function getPath(input){
-    
+    var lowerCaseInput = input.toLowerCase();
+    var charArray = lowerCaseInput.split('');
+
+    var prevRow = 1;
+    var prevCol = 1;
+
+    var result = "";
+
+    //Iterate through all characters of the input
+    for (i = 0; i < charArray.length; i++) {
+        //get the current row and col vals
+
+        var currentRow = getRow(charArray[i]);
+        var currentCol = getColumn(charArray[i]);
+
+        //Case 1: Space
+        if (currentCol == 0 || currentRow == 0) {
+            result = result.concat("S,");
+            //Case 2: Already on correct choice
+        } else if (currentCol == prevCol && currentRow == prevRow) {
+            result = result.concat("#,");
+            //Case 3: Must move cursor
+        } else {
+            var colDif = currentCol - prevCol;
+            var rowDif = currentRow - prevRow;
+
+
+            //move down
+            while (rowDif > 0) {
+                result = result.concat("D,");
+                rowDif--;
+            }
+
+            //move up
+            while (rowDif < 0) {
+                result = result.concat("U,");
+                rowDif++;
+            }
+
+            //move left
+            while (colDif < 0) {
+                result = result.concat("L,");
+                colDif++;
+            }
+
+            //move right
+            while (colDif > 0) {
+                result = result.concat("R,");
+                colDif--;
+            }
+
+            //hit select for this character
+            result = result.concat("#,");
+            
+        //set prevRow and prevCol to current 
+        prevCol = currentCol;
+        prevRow = currentRow;
+    }
+}
+    //chop off the final comma
+    result = result.substring(0, result.length - 1);
+
+    alert(result);
+    return result;
 }
 
 
