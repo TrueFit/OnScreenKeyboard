@@ -1,7 +1,6 @@
 $(document).ready(function () {
     $('#keyboard-input-button').click(function (event) {
         event.preventDefault;
-        // var input = $('#keyboard-input').val();
         var result = getPath();
     });
 });
