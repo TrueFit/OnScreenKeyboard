@@ -1,4 +1,20 @@
+$(document).ready(function () {
+    $('#keyboard-input-button').click(function (event) {
+        event.preventDefault;
+        var input = $('#keyboard-input').val();
+        var result = getPath(input);
+    });
+});
 
+function getPath(input){
+    
+}
+
+
+
+
+
+//Helper Methods
 
 function getColumn(c) {
     var result = 0;

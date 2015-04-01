@@ -7,7 +7,32 @@
 
 
     </head>
+
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    
     <body>
+
+         <div class="container">
+            <div class="row">
+                <h2 class="text-muted" style="margin-left: 24px">Input:</h2>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="keyboard-input" 
+                            placeholder="Enter String">
+                    </div>
+                    <div class="form-group">
+                        <button 
+                            type="submit" 
+                            id="keyboard-input-button" 
+                            class="btn btn-primary btn-sm">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
     
 
 
