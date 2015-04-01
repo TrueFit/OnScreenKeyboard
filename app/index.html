@@ -24,11 +24,25 @@
                     <button 
                         id="get-path-button" 
                         class="btn-success"
-                        onclick="getPath()">
-                        Get Path
+                        
+                        onclick="getAllPaths()">
+                        Get Path(s)
                     </button>
                 </div>
-                <pre id="pathDisplayArea"></pre>
+                
+                <!-- <pre id="pathDisplayArea"></pre> -->
+                <br>
+
+                <div id="display-table-div">
+                    <table id="display-table" class="table">
+                        <tr>
+                            <th>Input</th>
+                            <th>Output</th>
+
+                        </tr>
+                        <tbody id="display-table-rows"></tbody>
+                    </table>
+                </div>
 
             </div>
 

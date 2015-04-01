@@ -1,13 +1,42 @@
 $(document).ready(function () {
-    $('#keyboard-input-button').click(function (event) {
-        event.preventDefault;
-        var result = getPath();
-    });
+   
+        
+   
 });
 
 
-function getPath(){
-    var input = document.getElementById('fileDisplayArea').innerText;
+function getAllPaths(){
+    var allLinesString = document.getElementById('fileDisplayArea').innerText;
+    var arrayOfLines = allLinesString.split("\n");
+    
+
+    var arrayOfOutputs = [];
+    
+        // arrayOfOutputs.push(currentLineOutput);
+      
+
+    $.each(arrayOfLines, function(index, currentLine){
+        var currentLineOutput = getPath(currentLine);
+        addRow(currentLine, currentLineOutput);
+
+    })
+
+
+
+
+    // var pathDisplayArea = document.getElementById('pathDisplayArea');
+    // pathDisplayArea.innerText = result;
+}
+
+function addRow(input, output){
+    var displayTable = $('#display-table-rows');
+    displayTable.append($('<tr>')
+    .append($('<td>').text(input))
+    .append($('<td>').text(output))
+    )
+}
+
+function getPath(input){
     var lowerCaseInput = input.toLowerCase();
     var charArray = lowerCaseInput.split('');
 
@@ -70,10 +99,7 @@ function getPath(){
     //chop off the final comma
     result = result.substring(0, result.length - 1);
 
-    // alert(result);
 
-    var pathDisplayArea = document.getElementById('pathDisplayArea');
-    pathDisplayArea.innerText = result;
     return result;
 }
 

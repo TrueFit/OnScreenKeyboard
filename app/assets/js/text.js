@@ -10,6 +10,7 @@ window.onload = function() {
 				var reader = new FileReader();
 
 				reader.onload = function(e) {
+					
 					fileDisplayArea.innerText = reader.result;
 				}
 
