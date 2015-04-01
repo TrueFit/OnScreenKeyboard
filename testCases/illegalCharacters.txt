@@ -1,8 +1,5 @@
-Programming
-javascript000sdfasdfasdf
-and f
-jquery332366
-is
-fun
-*
-_
+**3
+3**
+
+8*
+This line is fine
