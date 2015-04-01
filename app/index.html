@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DVR Controller</title>
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/styles.css" rel="stylesheet">
+
+
+    </head>
+
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    
+    <body>
+
+            
+            <div id="page-wrapper">
+                <h1>Keyboard Input Path</h1>
+                <div>
+                    Select a text file:
+                    <input type="file" id="fileInput">
+                </div>
+                <pre id="fileDisplayArea"></pre>
+                <div class="container-fluid">
+                    <div class="row">
+                        <button 
+                            id="get-path-button" 
+                            class="btn-success"
+                            onclick="getAllPaths()">
+                            Get Path(s)
+                        </button>
+                        <button
+                            id="clear-button"
+                            class="btn-success"
+                            onclick="clearTable()"
+                            style="margin-left:10px">
+                            Clear
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- <pre id="pathDisplayArea"></pre> -->
+                <br>
+
+                <div id="display-table-div">
+                    <table id="display-table" class="table table-responsive">
+                        <tr>
+                            <th width="30%">Input</th>
+                            <th width="70%">Output</th>
+
+                        </tr>
+                        <tbody id="display-table-rows"></tbody>
+                    </table>
+                </div>
+
+            </div>
+
+
+
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/js/keyboardInput.js"></script>
+        <script src="assets/js/text.js"></script>
+
+    </body>
+</html>
