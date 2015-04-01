@@ -1,13 +1,14 @@
 $(document).ready(function () {
     $('#keyboard-input-button').click(function (event) {
         event.preventDefault;
-        var input = $('#keyboard-input').val();
-        var result = getPath(input);
+        // var input = $('#keyboard-input').val();
+        var result = getPath();
     });
 });
 
 
-function getPath(input){
+function getPath(){
+    var input = document.getElementById('fileDisplayArea').innerText;
     var lowerCaseInput = input.toLowerCase();
     var charArray = lowerCaseInput.split('');
 
@@ -70,7 +71,10 @@ function getPath(input){
     //chop off the final comma
     result = result.substring(0, result.length - 1);
 
-    alert(result);
+    // alert(result);
+
+    var pathDisplayArea = document.getElementById('pathDisplayArea');
+    pathDisplayArea.innerText = result;
     return result;
 }
 
