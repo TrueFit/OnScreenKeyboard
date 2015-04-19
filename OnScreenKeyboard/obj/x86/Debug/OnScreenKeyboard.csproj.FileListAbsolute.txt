@@ -1,0 +1,10 @@
+D:\users\patrick\documents\visual studio 2010\Projects\OnScreenKeyboard\OnScreenKeyboard\bin\Debug\OnScreenKeyboard.exe
+D:\users\patrick\documents\visual studio 2010\Projects\OnScreenKeyboard\OnScreenKeyboard\bin\Debug\OnScreenKeyboard.pdb
+D:\users\patrick\documents\visual studio 2010\Projects\OnScreenKeyboard\OnScreenKeyboard\obj\x86\Debug\OnScreenKeyboard.MainForm.resources
+D:\users\patrick\documents\visual studio 2010\Projects\OnScreenKeyboard\OnScreenKeyboard\obj\x86\Debug\OnScreenKeyboard.Properties.Resources.resources
+D:\users\patrick\documents\visual studio 2010\Projects\OnScreenKeyboard\OnScreenKeyboard\obj\x86\Debug\OnScreenKeyboard.csproj.GenerateResource.Cache
+D:\users\patrick\documents\visual studio 2010\Projects\OnScreenKeyboard\OnScreenKeyboard\obj\x86\Debug\OnScreenKeyboard.exe
+D:\users\patrick\documents\visual studio 2010\Projects\OnScreenKeyboard\OnScreenKeyboard\obj\x86\Debug\OnScreenKeyboard.pdb
+D:\users\patrick\documents\visual studio 2010\Projects\OnScreenKeyboard\OnScreenKeyboard\obj\x86\Debug\OnScreenKeyboard.csprojResolveAssemblyReference.cache
+C:\Users\Patrick\Documents\GitHub\OnScreenKeyboard\OnScreenKeyboard\obj\x86\Debug\OnScreenKeyboard.exe
+C:\Users\Patrick\Documents\GitHub\OnScreenKeyboard\OnScreenKeyboard\obj\x86\Debug\OnScreenKeyboard.pdb
