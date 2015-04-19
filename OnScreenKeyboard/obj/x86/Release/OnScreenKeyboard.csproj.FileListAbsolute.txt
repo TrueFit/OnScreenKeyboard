@@ -1,0 +1,7 @@
+C:\Users\Patrick\Documents\GitHub\OnScreenKeyboard\OnScreenKeyboard\bin\Release\OnScreenKeyboard.exe
+C:\Users\Patrick\Documents\GitHub\OnScreenKeyboard\OnScreenKeyboard\bin\Release\OnScreenKeyboard.pdb
+C:\Users\Patrick\Documents\GitHub\OnScreenKeyboard\OnScreenKeyboard\obj\x86\Release\OnScreenKeyboard.MainForm.resources
+C:\Users\Patrick\Documents\GitHub\OnScreenKeyboard\OnScreenKeyboard\obj\x86\Release\OnScreenKeyboard.Properties.Resources.resources
+C:\Users\Patrick\Documents\GitHub\OnScreenKeyboard\OnScreenKeyboard\obj\x86\Release\OnScreenKeyboard.csproj.GenerateResource.Cache
+C:\Users\Patrick\Documents\GitHub\OnScreenKeyboard\OnScreenKeyboard\obj\x86\Release\OnScreenKeyboard.exe
+C:\Users\Patrick\Documents\GitHub\OnScreenKeyboard\OnScreenKeyboard\obj\x86\Release\OnScreenKeyboard.pdb
