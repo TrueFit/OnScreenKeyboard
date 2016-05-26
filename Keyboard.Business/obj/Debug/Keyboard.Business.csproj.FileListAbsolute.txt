@@ -1,0 +1,32 @@
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\bin\Debug\Keyboard.Business.dll
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\bin\Debug\Keyboard.Business.pdb
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\obj\Debug\Keyboard.Business.csprojResolveAssemblyReference.cache
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\obj\Debug\Keyboard.Business.dll
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\obj\Debug\Keyboard.Business.pdb
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\bin\Debug\Keyboard.Business.dll.config
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\bin\Debug\AutoMapper.dll
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\bin\Debug\EntityFramework.dll
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\bin\Debug\EntityFramework.SqlServer.dll
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\bin\Debug\Keyboard.Common.dll
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\bin\Debug\Keyboard.Domain.dll
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\bin\Debug\Keyboard.Common.pdb
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\bin\Debug\Keyboard.Domain.pdb
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\bin\Debug\AutoMapper.xml
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\bin\Debug\EntityFramework.xml
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\bin\Debug\Keyboard.Business.dll.config
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\bin\Debug\Keyboard.Business.dll
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\bin\Debug\Keyboard.Business.pdb
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\bin\Debug\AutoMapper.dll
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\bin\Debug\EntityFramework.dll
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\bin\Debug\Keyboard.Common.dll
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\bin\Debug\Keyboard.Domain.dll
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\bin\Debug\Keyboard.Common.pdb
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\bin\Debug\Keyboard.Domain.pdb
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\bin\Debug\AutoMapper.xml
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\bin\Debug\EntityFramework.xml
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\obj\Debug\Keyboard.Business.csprojResolveAssemblyReference.cache
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\obj\Debug\Keyboard.Business.dll
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Business\obj\Debug\Keyboard.Business.pdb

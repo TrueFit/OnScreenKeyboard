@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CableProviderModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DvrKeyboard">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="DvrKeys" Relationship="Self.FK_DvrKeys_ToKeyboard" FromRole="DvrKeyboard" ToRole="DvrKeys" />
+  </EntityType>
+  <EntityType Name="DvrKey">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Value" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="X" Type="Int32" Nullable="false" />
+    <Property Name="Y" Type="Int32" Nullable="false" />
+    <Property Name="KeyboardId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DvrKeyboard" Relationship="Self.FK_DvrKeys_ToKeyboard" FromRole="DvrKeys" ToRole="DvrKeyboard" />
+  </EntityType>
+  <Association Name="FK_DvrKeys_ToKeyboard">
+    <End Role="DvrKeyboard" Type="Self.DvrKeyboard" Multiplicity="1" />
+    <End Role="DvrKeys" Type="Self.DvrKey" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DvrKeyboard">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DvrKeys">
+        <PropertyRef Name="KeyboardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CableProviderConnection" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DvrKeyboards" EntityType="Self.DvrKeyboard" />
+    <EntitySet Name="DvrKeys" EntityType="Self.DvrKey" />
+    <AssociationSet Name="FK_DvrKeys_ToKeyboard" Association="Self.FK_DvrKeys_ToKeyboard">
+      <End Role="DvrKeyboard" EntitySet="DvrKeyboards" />
+      <End Role="DvrKeys" EntitySet="DvrKeys" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

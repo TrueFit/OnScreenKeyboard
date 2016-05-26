@@ -1,0 +1,83 @@
+﻿.keyboard {
+    width: 420px;
+    margin: 0px auto;
+}
+
+    .keyboard .keyRow {
+        clear: left;
+    }
+
+    .keyboard .key {
+        float: left;
+        height: 60px;
+        width: 60px;
+        font-size: 18px;
+        text-align: center;
+        padding: 17px;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+
+
+.well > h3 {
+    margin-top: 0px;
+    border-bottom: 1px solid #E2E2E2;
+    padding-bottom: 10px;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.action {
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: .9em;
+    display: inline-block;
+    box-shadow: 0px 1px 5px #B3B3B3;
+    width: 45px;
+    padding: 4px 10px;
+}
+
+     [class~='#'] {
+        background-color: #FF9800;
+    }
+
+    .action.S {
+        background-color: #F44336;
+    }
+
+    .action:before {
+        font-family: 'Glyphicons Halflings';
+    }
+
+    .action.U:before {
+        content: "\e133";
+    }
+
+    .action.D:before {
+        content: "\e134";
+    }
+
+    .action.L:before {
+        content: "\e132";
+    }
+
+    .action.R:before {
+        content: "\e131";
+    }
+    
+    .action:after {
+        content: ",";
+        color: transparent;
+    }
+
+.plain-text {
+    color: #999;
+    border-top: 1px solid #E2E2E2;
+    margin-top: 15px;
+    padding-top: 15px;
+    letter-spacing: 1.2px;
+}

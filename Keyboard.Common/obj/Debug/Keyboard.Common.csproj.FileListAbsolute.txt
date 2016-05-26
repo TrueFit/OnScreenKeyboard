@@ -1,0 +1,11 @@
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Common\bin\Debug\Keyboard.Common.dll
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Common\bin\Debug\Keyboard.Common.pdb
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Common\obj\Debug\Keyboard.Common.dll
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Common\obj\Debug\Keyboard.Common.pdb
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Common\bin\Debug\Keyboard.Common.dll.CodeAnalysisLog.xml
+c:\Users\mmorrow\documents\visual studio 2015\Projects\Keyboard.Common\bin\Debug\Keyboard.Common.dll.lastcodeanalysissucceeded
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Common\bin\Debug\Keyboard.Common.dll
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Common\bin\Debug\Keyboard.Common.pdb
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Common\obj\Debug\Keyboard.Common.csprojResolveAssemblyReference.cache
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Common\obj\Debug\Keyboard.Common.dll
+C:\Users\mmorrow\Documents\Git-Repos\OnScreenKeyboard\Keyboard.Common\obj\Debug\Keyboard.Common.pdb
