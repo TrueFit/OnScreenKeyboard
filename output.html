@@ -1,0 +1,45 @@
+<!-- This file is an example usage of the onScreenKeyboard.js -->
+<!-- Along with this file there is an input.txt file that may be downloaded and then selected using this file's input -->
+<html>
+<head>
+	<script src="onScreenKeyboard.js"></script>
+</head>
+
+<body>
+<div id="page-wrapper">
+
+    <h1>On Screen Keyboard</h1>
+    <div>
+        Select a flat file: 
+        <input type="file" id="fileInput">
+    </div>
+    <pre id="fileDisplayArea"><pre>
+
+</div>
+
+<script>
+function keyboardCallback(keyboardOutput) {
+    var fileDisplayArea = document.getElementById('fileDisplayArea');
+	fileDisplayArea.innerText = keyboardOutput;
+};
+
+function keyboardError(msg) {
+    var fileDisplayArea = document.getElementById('fileDisplayArea');
+	fileDisplayArea.innerText = msg;
+}
+
+window.onload = function() {
+    var fileInput = document.getElementById('fileInput');
+    var fileDisplayArea = document.getElementById('fileDisplayArea');
+
+    fileInput.addEventListener('change', function(e) {
+        var file = fileInput.files[0];
+
+        var keyboard = new OnScreenKeyboard(keyboardCallback, keyboardError);
+
+        keyboard.setFile(file);
+    });
+}
+</script>
+</body>
+</html>
