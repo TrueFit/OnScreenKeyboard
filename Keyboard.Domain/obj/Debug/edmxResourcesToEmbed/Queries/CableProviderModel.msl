@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CableProviderStoreContainer" CdmEntityContainer="CableProviderConnection">
+    <EntitySetMapping Name="DvrKeyboards">
+      <EntityTypeMapping TypeName="CableProvider.DvrKeyboard">
+        <MappingFragment StoreEntitySet="DvrKeyboard">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DvrKeys">
+      <EntityTypeMapping TypeName="CableProvider.DvrKey">
+        <MappingFragment StoreEntitySet="DvrKeys">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="KeyboardId" ColumnName="KeyboardId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

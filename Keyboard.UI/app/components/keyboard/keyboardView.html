@@ -1,0 +1,77 @@
+﻿<div ng-controller="keyboardController">
+
+    <div>
+
+        <!-- Nav / Header -->
+        <div class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Path Engine</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-8 col-centered">
+
+            <div class="panel panel-default">
+
+                <!-- Upload -->
+                <div class="panel-heading">Upload Your File</div>
+
+                <div class="panel-body">
+                    <div class="col-sm-4">
+                        <input type="file" id="textUpload" class="btn btn-default" />
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="button" id="processFile" class="btn btn-primary" ng-click="Process.File($event)" value="Process File" />
+                    </div>
+                </div>
+
+                <div class="alert alert-danger" ng-show="HasError">
+                    <h4>There are a few problems with the file you've uploaded</h4>
+                    <ul>
+                        <li ng-repeat="Error in Errors">{{Error}}</li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <!-- Result -->
+            <div class="panel panel-default">
+                <div class="panel-heading">Keyboard</div>
+                <div class="panel-body">
+
+                    <div class="well" id="result">
+                        <h3>{{Term}}</h3>
+                        <div class="path">
+                            <span ng-repeat="Movement in Path" class="action {{Movement.Name}} label label-primary">
+                                {{Movement.Name}}
+                            </span>
+                        </div>
+                        <div class="plain-text">
+                            {{TextActions}}
+                        </div>
+                    </div>
+
+                    <div class="keyboard">
+                        <div class="keyRow" ng-repeat="KeyRow in Rows">
+
+                            <div class="key btn btn-default" ng-repeat="Key in KeyRow.Keys" key-value="{{Key.Value}}" key-coor="{{Key.X}},{{Key.Y}}">
+                                {{Key.Value}}
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
