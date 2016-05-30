@@ -1,0 +1,3 @@
+D,R,R,#,D,D,L,#,S,U,U,U,R,#,D,D,R,R,R,#,L,L,L,#,D,R,R,#,U,U,U,L,#
+R,R,R,#,L,L,L,#,D,D,R,R,R,R,R,#,D,D,L,L,L,L,L,#,U,U,U,R,R,R,R,R,#
+D,D,D,R,#,U,U,#,R,#,D,D,L,L,#,S,U,U,R,R,#,D,D,L,L,#,S,U,U,U,#,D,D,R,#,S,U,U,R,R,R,#,D,D,D,R,#,U,U,U,L,L,L,L,L,#,D,D,#,R,R,R,#,U,R,R,#,U,L,#
