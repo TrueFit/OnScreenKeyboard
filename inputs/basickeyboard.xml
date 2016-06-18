@@ -1,0 +1,41 @@
+<OverlayKeyboard>
+	<PGrid rows="6" columns="6" curStartRow="1" curStartCol="1"/>
+	<VGrid>
+		<VKey row="1" column="1">A</VKey>
+		<VKey row="1" column="2">B</VKey>
+		<VKey row="1" column="3">C</VKey>
+		<VKey row="1" column="4">D</VKey>
+		<VKey row="1" column="5">E</VKey>
+		<VKey row="1" column="6">F</VKey>
+		<VKey row="2" column="1">G</VKey>
+		<VKey row="2" column="2">H</VKey>
+		<VKey row="2" column="3">I</VKey>
+		<VKey row="2" column="4">J</VKey>
+		<VKey row="2" column="5">K</VKey>
+		<VKey row="2" column="6">L</VKey>
+		<VKey row="3" column="1">M</VKey>
+		<VKey row="3" column="2">N</VKey>
+		<VKey row="3" column="3">O</VKey>
+		<VKey row="3" column="4">P</VKey>
+		<VKey row="3" column="5">Q</VKey>
+		<VKey row="3" column="6">R</VKey>
+		<VKey row="4" column="1">S</VKey>
+		<VKey row="4" column="2">T</VKey>
+		<VKey row="4" column="3">U</VKey>
+		<VKey row="4" column="4">V</VKey>
+		<VKey row="4" column="5">W</VKey>
+		<VKey row="4" column="6">X</VKey>
+		<VKey row="5" column="1">Y</VKey>
+		<VKey row="5" column="2">Z</VKey>
+		<VKey row="5" column="3">1</VKey>
+		<VKey row="5" column="4">2</VKey>
+		<VKey row="5" column="5">3</VKey>
+		<VKey row="5" column="6">4</VKey>
+		<VKey row="6" column="1">5</VKey>
+		<VKey row="6" column="2">6</VKey>
+		<VKey row="6" column="3">7</VKey>
+		<VKey row="6" column="4">8</VKey>
+		<VKey row="6" column="5">9</VKey>
+		<VKey row="6" column="6">0</VKey>
+	</VGrid>
+</OverlayKeyboard>

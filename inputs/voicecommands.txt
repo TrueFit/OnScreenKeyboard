@@ -1,0 +1,7 @@
+record
+fast forward
+rewind
+play
+pause
+eject
+it crowd

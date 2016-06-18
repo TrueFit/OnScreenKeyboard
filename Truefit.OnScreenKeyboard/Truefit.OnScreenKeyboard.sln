@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Truefit.OnScreenKeyboard", "Truefit.OnScreenKeyboard\Truefit.OnScreenKeyboard.csproj", "{5C45EA08-BA6E-4D58-9335-30A5DCB12654}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Truefit.OnScreenKeyboard.Controls", "Truefit.OnScreenKeyboard.Controls\Truefit.OnScreenKeyboard.Controls.csproj", "{D67B1B2B-ACD4-4CDF-A53C-E5C3E48E54C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Truefit.OnScreenKeyboard.Models", "Truefit.OnScreenKeyboard.Models\Truefit.OnScreenKeyboard.Models.csproj", "{4E5B1270-8DBB-41D5-B8EB-8AF90F0E7035}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C45EA08-BA6E-4D58-9335-30A5DCB12654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C45EA08-BA6E-4D58-9335-30A5DCB12654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C45EA08-BA6E-4D58-9335-30A5DCB12654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C45EA08-BA6E-4D58-9335-30A5DCB12654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D67B1B2B-ACD4-4CDF-A53C-E5C3E48E54C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D67B1B2B-ACD4-4CDF-A53C-E5C3E48E54C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D67B1B2B-ACD4-4CDF-A53C-E5C3E48E54C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D67B1B2B-ACD4-4CDF-A53C-E5C3E48E54C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E5B1270-8DBB-41D5-B8EB-8AF90F0E7035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E5B1270-8DBB-41D5-B8EB-8AF90F0E7035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E5B1270-8DBB-41D5-B8EB-8AF90F0E7035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E5B1270-8DBB-41D5-B8EB-8AF90F0E7035}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

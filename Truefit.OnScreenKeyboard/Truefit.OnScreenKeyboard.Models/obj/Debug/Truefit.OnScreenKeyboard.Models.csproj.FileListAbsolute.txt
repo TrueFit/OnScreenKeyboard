@@ -1,0 +1,4 @@
+C:\Users\Rich\Dropbox\OnScreenKeyboard\Truefit.OnScreenKeyboard\Truefit.OnScreenKeyboard.Models\bin\Debug\Truefit.OnScreenKeyboard.Models.dll
+C:\Users\Rich\Dropbox\OnScreenKeyboard\Truefit.OnScreenKeyboard\Truefit.OnScreenKeyboard.Models\bin\Debug\Truefit.OnScreenKeyboard.Models.pdb
+C:\Users\Rich\Dropbox\OnScreenKeyboard\Truefit.OnScreenKeyboard\Truefit.OnScreenKeyboard.Models\obj\Debug\Truefit.OnScreenKeyboard.Models.dll
+C:\Users\Rich\Dropbox\OnScreenKeyboard\Truefit.OnScreenKeyboard\Truefit.OnScreenKeyboard.Models\obj\Debug\Truefit.OnScreenKeyboard.Models.pdb

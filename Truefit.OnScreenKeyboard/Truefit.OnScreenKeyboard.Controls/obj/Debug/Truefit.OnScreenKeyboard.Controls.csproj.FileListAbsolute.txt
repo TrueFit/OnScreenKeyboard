@@ -1,0 +1,7 @@
+C:\Users\Rich\Dropbox\OnScreenKeyboard\Truefit.OnScreenKeyboard\Truefit.OnScreenKeyboard.Controls\bin\Debug\Truefit.OnScreenKeyboard.Controls.dll
+C:\Users\Rich\Dropbox\OnScreenKeyboard\Truefit.OnScreenKeyboard\Truefit.OnScreenKeyboard.Controls\bin\Debug\Truefit.OnScreenKeyboard.Controls.pdb
+C:\Users\Rich\Dropbox\OnScreenKeyboard\Truefit.OnScreenKeyboard\Truefit.OnScreenKeyboard.Controls\bin\Debug\Truefit.OnScreenKeyboard.Models.dll
+C:\Users\Rich\Dropbox\OnScreenKeyboard\Truefit.OnScreenKeyboard\Truefit.OnScreenKeyboard.Controls\bin\Debug\Truefit.OnScreenKeyboard.Models.pdb
+C:\Users\Rich\Dropbox\OnScreenKeyboard\Truefit.OnScreenKeyboard\Truefit.OnScreenKeyboard.Controls\obj\Debug\Truefit.OnScreenKeyboard.Controls.csprojResolveAssemblyReference.cache
+C:\Users\Rich\Dropbox\OnScreenKeyboard\Truefit.OnScreenKeyboard\Truefit.OnScreenKeyboard.Controls\obj\Debug\Truefit.OnScreenKeyboard.Controls.dll
+C:\Users\Rich\Dropbox\OnScreenKeyboard\Truefit.OnScreenKeyboard\Truefit.OnScreenKeyboard.Controls\obj\Debug\Truefit.OnScreenKeyboard.Controls.pdb

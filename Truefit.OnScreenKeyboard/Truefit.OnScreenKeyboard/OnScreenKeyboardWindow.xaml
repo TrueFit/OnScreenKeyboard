@@ -1,0 +1,94 @@
+﻿<Window x:Class="Truefit.OnScreenKeyboard.OnScreenKeyboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Truefit.OnScreenKeyboard"
+        mc:Ignorable="d"
+        Title="Rich Kisic - OnScreenKeyboard" Height="600" Width="810">
+    <StackPanel Orientation="Horizontal" Width="800">
+        <StackPanel HorizontalAlignment="Left" Width="600" Height="600" Background="White">
+            <Grid HorizontalAlignment="Left" Height="80">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+                <TextBlock HorizontalAlignment="Right" Padding="5">Overlay Keyboard XML Definition: </TextBlock>
+                <TextBox Name="FileNameOverlayKeyboardDefinition" Grid.Column="1"></TextBox>
+                <Button Name="BrowseOverlayKeyboardXMLDefinition" Grid.Column="2" Click="BrowseOverlayKeyboardXMLDefinition_Click" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">...</Button>
+                <Button Name="LoadOverlayKeyboardXMLDefinition" Grid.Column="4" Click="LoadOverlayKeyboardXMLDefinition_Click" Height="20" VerticalAlignment="Top" Width="40">Load</Button>
+
+                <TextBlock Grid.Row="1" HorizontalAlignment="Right" Padding="5">Voice Commands Flat File:</TextBlock>
+                <TextBox Name="FileNameVoiceCommandsFlatFile" Grid.Column="1" Grid.Row="1"></TextBox>
+                <Button Name="BrowseVoiceCommandsFlatFile" Grid.Row="1" Grid.Column="2" Click="BrowseVoiceCommandsFlatFile_Click" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">...</Button>
+                <Button Name="LoadVoiceCommandsFlatFile" Grid.Row="1" Grid.Column="4" Click="LoadVoiceCommandsFlatFile_Click" Height="20" VerticalAlignment="Top" Width="40">Load</Button>
+
+                <TextBlock Grid.Row="2" HorizontalAlignment="Right" Padding="5">Cycle Edges:</TextBlock>
+                <CheckBox Name="CycleEdges" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Unchecked="CycleEdges_Checked" Checked="CycleEdges_Checked"></CheckBox>
+            </Grid>
+        
+            <Grid Name="KeyboardGrid" Height="450" Width="450" HorizontalAlignment="Center" Background="White">
+        
+            </Grid>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Width="200" Height="600" Background="LightSteelBlue">
+            <TextBlock HorizontalAlignment="Center" TextAlignment="Center" Padding="0" TextWrapping="Wrap" FontWeight="Bold">Arrow Pad Remote Control with Voice to Text</TextBlock>
+            <Grid HorizontalAlignment="Center" Height="180" Width="180">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <Button Name="RemoteButtonUp" Click="RemoteButtonUp_Click" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Width="50" Height="50" >
+                    ▲
+                </Button>
+                <Button Name="RemoteButtonLeft" Click="RemoteButtonLeft_Click" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Width="50" Height="50" >
+                    ◀
+                </Button>
+                <Button Name="RemoteButtonRight" Click="RemoteButtonRight_Click" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Width="50" Height="50" >
+                    ▶
+                </Button>
+                <Button Name="RemoteButtonOK" Click="RemoteButtonOK_Click" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Width="50" Height="50" >
+                    OK
+                </Button>
+                <Button Name="RemoteButtonDown" Click="RemoteButtonDown_Click" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Width="50" Height="50" >
+                    ▼
+                </Button>
+            </Grid>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <ComboBox Name="VoiceCommandsComboBox" Width="135" Padding="4"/>
+                <Button Name="RemoteButtonExecuteVoiceCommand" Click="RemoteButtonExecuteVoiceCommand_Click" Padding="4">🎤Execute</Button>
+            </StackPanel>
+            <TextBlock Height="40"></TextBlock>
+            <TextBlock Padding="5">Text Output:</TextBlock>
+            <RichTextBox Name="TextOutput" IsReadOnly="True" Height="90" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"></RichTextBox>
+            <TextBlock Padding="5">Optimal Path Output:</TextBlock>
+            <RichTextBox Name="PathOutput" IsReadOnly="True" Height="140" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"></RichTextBox>
+        </StackPanel>
+        <RichTextBox x:Name="richTextBox" Width="100">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </StackPanel>
+</Window>
