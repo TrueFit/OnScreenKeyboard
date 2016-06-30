@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1CBB1C0-FE49-465A-A1AB-781F1676E96E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Specs</RootNamespace>
+    <AssemblyName>Specs</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Machine.Specifications">
+      <HintPath>..\packages\Machine.Specifications.0.9.3\lib\net45\Machine.Specifications.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications.Clr4">
+      <HintPath>..\packages\Machine.Specifications.0.9.3\lib\net45\Machine.Specifications.Clr4.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications.Should">
+      <HintPath>..\packages\Machine.Specifications.Should.0.9.0\lib\net45\Machine.Specifications.Should.dll</HintPath>
+    </Reference>
+    <Reference Include="NSubstitute">
+      <HintPath>..\packages\NSubstitute.1.8.2.0\lib\net45\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="NSubstituteAutoMocker">
+      <HintPath>..\packages\NSubstituteAutoMocker.1.1.0.0\lib\net45\NSubstituteAutoMocker.dll</HintPath>
+    </Reference>
+    <Reference Include="SimulatableApi.StreamStore">
+      <HintPath>..\packages\SimulatableApi.StreamStore.0.1.1.0\lib\net40\SimulatableApi.StreamStore.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=2.6.4.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.AutoMocking">
+      <HintPath>..\packages\structuremap.automocking.2.6.2\lib\StructureMap.AutoMocking.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.AutoMocking.NSubstitute">
+      <HintPath>..\packages\structuremap.automocking.nsubstitute.2.0.1.8\lib\net40\StructureMap.AutoMocking.NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\When_getting_position_of_1.cs" />
+    <Compile Include="Extensions\When_getting_position_of_a.cs" />
+    <Compile Include="InputFileContentVerifier\When_file_is_invalid.cs" />
+    <Compile Include="InputFileContentVerifier\When_file_is_valid.cs" />
+    <Compile Include="InputFileRetriever\When_getting_a_file.cs" />
+    <Compile Include="InputFileRetriever\When_getting_a_nonexistent_file.cs" />
+    <Compile Include="KeyboardPositionVector\When_getting_path_for_0_0_vector.cs" />
+    <Compile Include="KeyboardPositionVector\When_getting_path_for_5_5_vector.cs" />
+    <Compile Include="KeyboardPositionVector\When_getting_path_for_neg5_neg5_vector.cs" />
+    <Compile Include="KeyboardPosition\When_getting_the_keyboard_position_of_4.cs" />
+    <Compile Include="KeyboardPosition\When_getting_the_keyboard_position_of_j.cs" />
+    <Compile Include="PathDeterminer\When_getting_it_crowd.cs" />
+    <Compile Include="Extensions\When_getting_position_of_0.cs" />
+    <Compile Include="KeyboardPosition\When_getting_the_keyboard_position_of_o.cs" />
+    <Compile Include="PathDeterminer\When_getting_the_letter_a.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NavigationListToStringConverter\When_getting_the_path_string.cs" />
+    <Compile Include="With.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnScreenKeyboard\OnScreenKeyboard.csproj">
+      <Project>{bc25016c-2c91-4bd9-b03a-ea53107a7450}</Project>
+      <Name>OnScreenKeyboard</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
