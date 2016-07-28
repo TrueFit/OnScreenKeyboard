@@ -28,7 +28,9 @@ namespace OnScreenKeyboard
                 "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                "~/Scripts/lib/angular.js"));
+                "~/Scripts/lib/angular.js",
+                "~/Scripts/lib/angular-mocks.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/app").IncludeDirectory(
                 "~/Scripts/app", "*.js", true));
         }
