@@ -1,7 +1,27 @@
-﻿
+﻿<div class="form-group">
+    <div class="col-md-6">
+        <label>Alphabet:</label>
+        <textarea class="form-control" rows="5" ng-model="vm.alphabet"></textarea>
+    </div>
+    <div class="col-md-6">
+        <label>Search Terms:</label>
+        <textarea class="form-control" rows="5" ng-model="vm.searchTerms"></textarea>
+    </div>
+</div>
 
-<h1>The Web API returns the following values:</h1>
+<div class="control-buttons">
+    <button type="button" class="btn" ng-click="vm.determineOnScreenKeyboard()">Submit</button>
+    <button type="button" class="btn" ng-click="vm.clearEntries()">Clear</button>
+</div>
+
+<div class="results">
+    <label>Results:</label>
+    {{vm.results}}
+</div>
+
+<!--<h1>The Web API returns the following values:</h1>
 <ul>
     <li ng-repeat="i in vm.values">{{i}}</li>
-</ul>
+</ul>-->
+
 <p ng-show="vm.isVisibleErrorMessage" class="text-danger">{{vm.errorMessage}}</p>

@@ -8,20 +8,17 @@ var App;
             this.errorMessage = "";
             this.isVisibleErrorMessage = false;
             this.values = [];
-            this.getValues();
+            this.alphabet = "";
+            this.searchTerms = "";
+            this.results = "D,R,R,#,D,D,L,#,S,U,U,U,R,#,D,D,R,R,R,#,L,L,L,#,D,R,R,#,U,U,U,L,#";
+            //this.getValues();
         }
-        OnScreenKeyboardController.prototype.getValues = function () {
-            var _this = this;
-            this.$http.get("/api/onscreenkeyboard")
-                .then(function (response) {
-                _this.isVisibleErrorMessage = false;
-                _this.values = response.data;
-            })
-                .catch((function (reason) {
-                _this.isVisibleErrorMessage = true;
-                _this.errorMessage = reason.statusText;
-                return _this.values;
-            }));
+        OnScreenKeyboardController.prototype.determineOnScreenKeyboard = function () {
+        };
+        OnScreenKeyboardController.prototype.clearEntries = function () {
+            this.alphabet = "";
+            this.searchTerms = "";
+            this.results = "";
         };
         OnScreenKeyboardController.$inject = ["$http", "$window"];
         return OnScreenKeyboardController;
@@ -29,4 +26,3 @@ var App;
     App.OnScreenKeyboardController = OnScreenKeyboardController;
     angular.module("app").controller("OnScreenKeyboardController", OnScreenKeyboardController);
 })(App || (App = {}));
-//# sourceMappingURL=OnScreenKeyboardController.js.map

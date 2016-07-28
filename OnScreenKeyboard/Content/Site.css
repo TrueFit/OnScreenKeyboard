@@ -16,9 +16,18 @@
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
+.instruction-label {
+    padding-top: 20px;
+}
+
+.control-buttons {
+    padding-top: 160px;
+}
+
 textarea {
-    max-width: 280px;
+    resize: none;
+}
+
+.results {
+    padding-top: 20px;
 }
