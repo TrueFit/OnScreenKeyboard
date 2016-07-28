@@ -6,8 +6,14 @@ var App;
             this.$http = $http;
         }
         OnScreenKeyboardService.prototype.calculateResults = function (alphabet, searchTerms) {
-            //this.$http.post("/api/onscreenkeyboard/calculateResults")
-            return "got search terms " + searchTerms;
+            //this.$http.post("/api/onscreenkeyboard/calculateResults", {
+            //    alphabet: alphabet,
+            //    searchTerms: searchTerms
+            //}).then((response: ng.IHttpPromiseCallbackArg<string[]>) => {
+            //    return response.data;
+            //}).catch(((reason: ng.IHttpPromiseCallbackArg<string[]>) => {
+            //    return null;
+            //}));
         };
         OnScreenKeyboardService.$inject = ["$http"];
         return OnScreenKeyboardService;
@@ -27,4 +33,3 @@ var App;
 //            return this.values;
 //    }));
 //} 
-//# sourceMappingURL=OnScreenKeyboardService.js.map

@@ -45,4 +45,3 @@ var App;
     App.OnScreenKeyboardController = OnScreenKeyboardController;
     angular.module("app").controller("OnScreenKeyboardController", OnScreenKeyboardController);
 })(App || (App = {}));
-//# sourceMappingURL=OnScreenKeyboardController.js.map

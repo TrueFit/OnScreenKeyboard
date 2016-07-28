@@ -1,4 +1,5 @@
 ﻿using OnScreenKeyboard.Models;
+using OnScreenKeyboard.Services;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
@@ -41,9 +42,25 @@ namespace OnScreenKeyboard.Controllers.api
         [Route("calculateResults")]
         public HttpResponseMessage CalculateResults([FromBody] UserInput userInput)
         {
+            OnScreenKeyboardService onScreenKeyboardService = new OnScreenKeyboardService();
+            List<char> results = onScreenKeyboardService.CalculateResults(userInput.Alphabet, userInput.SearchTerms);
+
+            // TODO make this more elegant
+            string result = "";
+            for (int i = 0; i < results.Count; i++)
+            {
+                result += results[i];
+
+                if (i != results.Count - 1)
+                {
+                    result += ",";
+                }
+            }
+
             HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK);
-            response.Content = new StringContent(userInput.SearchTerms);
+            response.Content = new StringContent(result);
             response.Content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
             return response;
         }
     }
