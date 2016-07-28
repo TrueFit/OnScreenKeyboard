@@ -5,33 +5,33 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace bat_mvc.Controllers.api
+namespace OnScreenKeyboard.Controllers.api
 {
-    public class SampleController : ApiController
+    public class OnScreenKeyboardController : ApiController
     {
-        // GET api/<controller>
+        // GET: api/OnScreenKeyboard
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/<controller>/5
+        // GET: api/OnScreenKeyboard/5
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<controller>
+        // POST: api/OnScreenKeyboard
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT api/<controller>/5
+        // PUT: api/OnScreenKeyboard/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/<controller>/5
+        // DELETE: api/OnScreenKeyboard/5
         public void Delete(int id)
         {
         }

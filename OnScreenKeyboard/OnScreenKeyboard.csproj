@@ -132,7 +132,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\api\SampleController.cs" />
+    <Compile Include="Controllers\api\OnScreenKeyboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -156,7 +156,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Scripts\app\my-app.html" />
+    <Content Include="Scripts\app\onScreenKeyboard\on-screen-keyboard.html" />
     <Content Include="Scripts\lib\angular-animate.js" />
     <Content Include="Scripts\lib\angular-animate.min.js" />
     <Content Include="Scripts\lib\angular-aria.js" />
@@ -983,8 +983,8 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\app\app.ts" />
-    <TypeScriptCompile Include="Scripts\app\MyAppDirective.ts" />
-    <TypeScriptCompile Include="Scripts\app\MyAppController.ts" />
+    <TypeScriptCompile Include="Scripts\app\onScreenKeyboard\OnScreenKeyboardDirective.ts" />
+    <TypeScriptCompile Include="Scripts\app\onScreenKeyboard\OnScreenKeyboardController.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />

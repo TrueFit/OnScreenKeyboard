@@ -6,7 +6,7 @@ var App;
         return {
             restrict: "EA",
             link: link,
-            templateUrl: "/Scripts/App/my-app.html",
+            templateUrl: "/Scripts/app/onScreenKeyboard/on-screen-keyboard.html",
             controller: App.MyAppController,
             controllerAs: "vm"
         };
@@ -15,4 +15,3 @@ var App;
     }
     angular.module("app").directive("myApp", MyAppDirective);
 })(App || (App = {}));
-//# sourceMappingURL=MyAppDirective.js.map

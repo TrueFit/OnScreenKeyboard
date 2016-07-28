@@ -1,13 +1,13 @@
 ﻿module App {
     "use strict";
 
-    interface IMyAppController {
+    interface IOnScreenKeyboardController {
         values: string[];
         errorMessage: string;
         isVisibleErrorMessage: boolean
     }
 
-    export class MyAppController implements IMyAppController {
+    export class OnScreenKeyboardController implements IOnScreenKeyboardController {
         errorMessage: string = "";
         isVisibleErrorMessage: boolean = false;
         values: string[] = [];
@@ -18,7 +18,7 @@
         }
 
         private getValues(): void {
-            this.$http.get("/api/sample")
+            this.$http.get("/api/onscreenkeyboard")
                 .then((response: ng.IHttpPromiseCallbackArg<string[]>) => {
                     this.isVisibleErrorMessage = false;
                     this.values = response.data;
@@ -27,8 +27,9 @@
                     this.isVisibleErrorMessage = true;
                     this.errorMessage = reason.statusText;
                     return this.values;
-        }));
+            }));
+        }
     }
-}
-angular.module("app").controller("MyAppController", MyAppController);
+
+    angular.module("app").controller("OnScreenKeyboardController", OnScreenKeyboardController);
 }
