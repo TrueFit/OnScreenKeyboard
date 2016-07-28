@@ -1,55 +1,71 @@
 ﻿module App {
     "use strict";
 
+    // TODO add tranlations?
+
     interface IOnScreenKeyboardController {
-        values: string[];
         errorMessage: string;
         isVisibleErrorMessage: boolean;
 
         alphabet: string;
         searchTerms: string;
+
+        alphabetPlaceholder: string;
+        searchTermsPlaceholder: string;
+
         results: string;
 
-        determineOnScreenKeyboard(): void;
+        determineResults(): void;
         clearEntries(): void;
+        populateEnglish(): void;
     }
 
     export class OnScreenKeyboardController implements IOnScreenKeyboardController {
         errorMessage: string = "";
         isVisibleErrorMessage: boolean = false;
-        values: string[] = [];
 
         alphabet: string = "";
         searchTerms: string = "";
 
-        results: string = "D,R,R,#,D,D,L,#,S,U,U,U,R,#,D,D,R,R,R,#,L,L,L,#,D,R,R,#,U,U,U,L,#"
+        alphabetPlaceholder: string = "ABCDEF\nGHIJKL\nMNOPQR\nSTUVWX\nYZ1234\n567890";
+        searchTermsPlaceholder = "IT Crowd";
 
-        static $inject: string[] = ["$http", "$window"];
-        constructor(private $http: ng.IHttpService, private $window: ng.IWindowService) {
-            //this.getValues();
+        results: string = "";
+
+        static $inject: string[] = ["$http", "$window", "OnScreenKeyboardService"];
+        constructor(private $http: ng.IHttpService, private $window: ng.IWindowService, private OnScreenKeyboardService: OnScreenKeyboardService) {
         }
 
-        public determineOnScreenKeyboard(): void {
+        public determineResults(): void {
+            if (this.alphabet == "" || this.searchTerms == "") {
+                this.errorMessage = "Both the alphabet and the search terms are required to determine the results.";
+                this.isVisibleErrorMessage = true;
+                return;
+            }
+
+            this.isVisibleErrorMessage = false;
+            this.results = this.OnScreenKeyboardService.calculateResults(this.alphabet, this.searchTerms);
+
+            if (this.results == null || this.results == "") {
+                this.errorMessage = "Something went wrong with determining the results. Check the alphabet and search terms and try again.";
+                this.isVisibleErrorMessage = true;
+            }
         }
 
         public clearEntries(): void {
             this.alphabet = "";
             this.searchTerms = "";
             this.results = "";
+
+            this.errorMessage = "";
+            this.isVisibleErrorMessage = false;
         }
 
-        //private getValues(): void {
-        //    this.$http.get("/api/onscreenkeyboard")
-        //        .then((response: ng.IHttpPromiseCallbackArg<string[]>) => {
-        //            this.isVisibleErrorMessage = false;
-        //            this.values = response.data;
-        //        })
-        //        .catch(((reason: ng.IHttpPromiseCallbackArg<string[]>) => {
-        //            this.isVisibleErrorMessage = true;
-        //            this.errorMessage = reason.statusText;
-        //            return this.values;
-        //    }));
-        //}
+        // TODO make this generic for any language (pass in lang, use service to get alphabet?) wasn't working when passing in english\
+        // TODO try using a select instead of a dropdown?
+        public populateEnglish(): void {
+            this.alphabet = this.alphabetPlaceholder;
+        }
     }
 
     angular.module("app").controller("OnScreenKeyboardController", OnScreenKeyboardController);

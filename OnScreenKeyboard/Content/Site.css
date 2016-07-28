@@ -20,14 +20,25 @@
     padding-top: 20px;
 }
 
-.control-buttons {
-    padding-top: 160px;
-}
-
-textarea {
+.user-input {
     resize: none;
+    min-height: 130px;
+    margin-bottom: 20px;
 }
 
 .results {
     padding-top: 20px;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    color: #373a3c;
+    text-align: inherit;
+    white-space: nowrap;
+    background: 0 0;
+    border: 0;
 }

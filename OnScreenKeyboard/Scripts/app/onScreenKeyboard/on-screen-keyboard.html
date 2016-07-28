@@ -1,16 +1,25 @@
-﻿<div class="form-group">
-    <div class="col-md-6">
-        <label>Alphabet:</label>
-        <textarea class="form-control" rows="5" ng-model="vm.alphabet"></textarea>
-    </div>
-    <div class="col-md-6">
-        <label>Search Terms:</label>
-        <textarea class="form-control" rows="5" ng-model="vm.searchTerms"></textarea>
+﻿<div class="btn-group" role="group">
+    <button id="predefinedAlphabets" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Predefined Alphabets
+    </button> 
+    <div class="dropdown-menu" aria-labelledby="predefinedAlphabets">
+        <button class="dropdown-item" ng-click="vm.populateEnglish()">English</button>
     </div>
 </div>
 
-<div class="control-buttons">
-    <button type="button" class="btn" ng-click="vm.determineOnScreenKeyboard()">Submit</button>
+<div class="user-inputs form-group">
+    <div class="col-md-6">
+        <label>Alphabet:</label>
+        <textarea class="user-input form-control" rows="5" ng-model="vm.alphabet" placeholder="{{vm.alphabetPlaceholder}}"></textarea>
+    </div>
+    <div class="col-md-6">
+        <label>Search Terms:</label>
+        <textarea class="user-input form-control" rows="5" ng-model="vm.searchTerms" placeholder="{{vm.searchTermsPlaceholder}}"></textarea>
+    </div>
+</div>
+
+<div>
+    <button type="button" class="btn" ng-click="vm.determineResults()">Submit</button>
     <button type="button" class="btn" ng-click="vm.clearEntries()">Clear</button>
 </div>
 
