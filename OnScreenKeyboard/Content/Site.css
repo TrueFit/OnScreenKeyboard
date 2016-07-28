@@ -28,6 +28,8 @@
 
 .results {
     padding-top: 20px;
+    padding-bottom: 40px;
+    word-wrap: break-word;
 }
 
 .dropdown-item {
