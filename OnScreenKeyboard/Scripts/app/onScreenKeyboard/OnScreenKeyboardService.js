@@ -4,16 +4,19 @@ var App;
     var OnScreenKeyboardService = (function () {
         function OnScreenKeyboardService($http) {
             this.$http = $http;
+            this.languages = {
+                "Alphabetical English": "ABCDEF\nGHIJKL\nMNOPQR\nSTUVWX\nYZ1234\n567890",
+                "QWERTY English": "QWERTYUIOP\nASDFGHJKL\nZXCVBNM\n1234567890"
+            };
         }
-        OnScreenKeyboardService.prototype.calculateResults = function (alphabet, searchTerms) {
-            //this.$http.post("/api/onscreenkeyboard/calculateResults", {
-            //    alphabet: alphabet,
-            //    searchTerms: searchTerms
-            //}).then((response: ng.IHttpPromiseCallbackArg<string[]>) => {
-            //    return response.data;
-            //}).catch(((reason: ng.IHttpPromiseCallbackArg<string[]>) => {
-            //    return null;
-            //}));
+        OnScreenKeyboardService.prototype.calculateResults = function (keyboardLayout, searchTerms) {
+            return this.$http.post("/api/onscreenkeyboard/calculateResults", {
+                keyboardLayout: keyboardLayout,
+                searchTerms: searchTerms
+            });
+        };
+        OnScreenKeyboardService.prototype.getKeyboardLayout = function (language) {
+            return this.languages[language];
         };
         OnScreenKeyboardService.$inject = ["$http"];
         return OnScreenKeyboardService;
@@ -21,15 +24,4 @@ var App;
     App.OnScreenKeyboardService = OnScreenKeyboardService;
     angular.module("app").service("OnScreenKeyboardService", OnScreenKeyboardService);
 })(App || (App = {}));
-//private getValues(): void {
-//    this.$http.get("/api/onscreenkeyboard")
-//        .then((response: ng.IHttpPromiseCallbackArg<string[]>) => {
-//            this.isVisibleErrorMessage = false;
-//            this.values = response.data;
-//        })
-//        .catch(((reason: ng.IHttpPromiseCallbackArg<string[]>) => {
-//            this.isVisibleErrorMessage = true;
-//            this.errorMessage = reason.statusText;
-//            return this.values;
-//    }));
-//} 
+//# sourceMappingURL=OnScreenKeyboardService.js.map

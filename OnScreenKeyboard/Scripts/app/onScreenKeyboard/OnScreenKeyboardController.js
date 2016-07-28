@@ -8,36 +8,48 @@ var App;
             this.OnScreenKeyboardService = OnScreenKeyboardService;
             this.errorMessage = "";
             this.isVisibleErrorMessage = false;
-            this.alphabet = "";
+            this.keyboardLayout = "";
             this.searchTerms = "";
-            this.alphabetPlaceholder = "ABCDEF\nGHIJKL\nMNOPQR\nSTUVWX\nYZ1234\n567890";
-            this.searchTermsPlaceholder = "IT Crowd";
+            this.keyboardLayoutDisabled = true;
+            this.selectedKeyboardLayout = "No layout selected";
+            this.searchTermsPlaceholder = "Example: IT Crowd";
             this.results = "";
         }
         OnScreenKeyboardController.prototype.determineResults = function () {
-            if (this.alphabet == "" || this.searchTerms == "") {
-                this.errorMessage = "Both the alphabet and the search terms are required to determine the results.";
+            var _this = this;
+            if (this.keyboardLayout == "" || this.searchTerms == "") {
+                this.errorMessage = "Both the keyboard layout and the search terms are required to determine the results.";
                 this.isVisibleErrorMessage = true;
                 return;
             }
             this.isVisibleErrorMessage = false;
-            this.results = this.OnScreenKeyboardService.calculateResults(this.alphabet, this.searchTerms);
-            if (this.results == null || this.results == "") {
-                this.errorMessage = "Something went wrong with determining the results. Check the alphabet and search terms and try again.";
-                this.isVisibleErrorMessage = true;
-            }
+            var promise = this.OnScreenKeyboardService.calculateResults(this.keyboardLayout, this.searchTerms);
+            promise.then(function (response) {
+                _this.results = response.data;
+                if (_this.results == null || _this.results == "") {
+                    _this.errorMessage = "No results found. Check the keyboard layout and search terms and try again.";
+                    _this.isVisibleErrorMessage = true;
+                }
+            }).catch((function (reason) {
+                _this.isVisibleErrorMessage = true;
+                _this.errorMessage = reason.statusText;
+            }));
         };
         OnScreenKeyboardController.prototype.clearEntries = function () {
-            this.alphabet = "";
             this.searchTerms = "";
             this.results = "";
             this.errorMessage = "";
             this.isVisibleErrorMessage = false;
         };
-        // TODO make this generic for any language (pass in lang, use service to get alphabet?) wasn't working when passing in english\
-        // TODO try using a select instead of a dropdown?
-        OnScreenKeyboardController.prototype.populateEnglish = function () {
-            this.alphabet = this.alphabetPlaceholder;
+        OnScreenKeyboardController.prototype.populateKeyboardLayout = function (language) {
+            if (language === 'Custom') {
+                this.keyboardLayoutDisabled = false;
+            }
+            else {
+                this.keyboardLayoutDisabled = true;
+                this.keyboardLayout = this.OnScreenKeyboardService.getKeyboardLayout(language);
+            }
+            this.selectedKeyboardLayout = language;
         };
         OnScreenKeyboardController.$inject = ["$http", "$window", "OnScreenKeyboardService"];
         return OnScreenKeyboardController;
@@ -45,3 +57,4 @@ var App;
     App.OnScreenKeyboardController = OnScreenKeyboardController;
     angular.module("app").controller("OnScreenKeyboardController", OnScreenKeyboardController);
 })(App || (App = {}));
+//# sourceMappingURL=OnScreenKeyboardController.js.map

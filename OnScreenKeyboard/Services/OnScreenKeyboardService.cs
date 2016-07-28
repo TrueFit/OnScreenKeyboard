@@ -1,17 +1,14 @@
 ﻿using OnScreenKeyboard.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace OnScreenKeyboard.Services
 {
     public class OnScreenKeyboardService
     {
-        public List<char> CalculateResults(string alphabet, string searchTerms)
+        public List<char> CalculateResults(string keyboardLayout, string searchTerms)
         {
             List<char> output = new List<char>();
-            Dictionary<char, LetterLocation> dictionary = CreateDictionary(alphabet);
+            Dictionary<char, LetterLocation> dictionary = CreateDictionary(keyboardLayout);
 
             char[] userCharSearch = searchTerms.ToCharArray();
 
@@ -24,6 +21,12 @@ namespace OnScreenKeyboard.Services
                 if (desiredChar == ' ')
                 {
                     output.Add('S');
+                    continue;
+                }
+
+                if (!dictionary.ContainsKey(desiredChar))
+                {
+                    // unknown character, ignore it and go to the next character
                     continue;
                 }
 
@@ -62,11 +65,11 @@ namespace OnScreenKeyboard.Services
             return output;
         }
 
-        private Dictionary<char, LetterLocation> CreateDictionary(string alphabet)
+        private Dictionary<char, LetterLocation> CreateDictionary(string keyboardLayout)
         {
             Dictionary<char, LetterLocation> dictionary = new Dictionary<char, LetterLocation>();
 
-            string[] lines = alphabet.Split('\n');
+            string[] lines = keyboardLayout.Split('\n');
 
             for (int y = 0; y < lines.Length; y++)
             {

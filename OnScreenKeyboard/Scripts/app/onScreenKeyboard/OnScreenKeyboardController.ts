@@ -1,59 +1,70 @@
 ﻿module App {
     "use strict";
 
-    // TODO add tranlations?
-
     interface IOnScreenKeyboardController {
         errorMessage: string;
         isVisibleErrorMessage: boolean;
 
-        alphabet: string;
+        keyboardLayout: string;
         searchTerms: string;
 
-        alphabetPlaceholder: string;
+        keyboardLayoutDisabled: boolean;
+        selectedKeyboardLayout: string;
+
         searchTermsPlaceholder: string;
 
         results: string;
 
         determineResults(): void;
         clearEntries(): void;
-        populateEnglish(): void;
+        populateKeyboardLayout(language: string): void;
     }
 
     export class OnScreenKeyboardController implements IOnScreenKeyboardController {
         errorMessage: string = "";
         isVisibleErrorMessage: boolean = false;
 
-        alphabet: string = "";
+        keyboardLayout: string = "";
         searchTerms: string = "";
 
-        alphabetPlaceholder: string = "ABCDEF\nGHIJKL\nMNOPQR\nSTUVWX\nYZ1234\n567890";
-        searchTermsPlaceholder = "IT Crowd";
+        keyboardLayoutDisabled: boolean = true;
+        selectedKeyboardLayout: string = "No layout selected";
+
+        searchTermsPlaceholder = "Example: IT Crowd";
 
         results: string = "";
 
         static $inject: string[] = ["$http", "$window", "OnScreenKeyboardService"];
-        constructor(private $http: ng.IHttpService, private $window: ng.IWindowService, private OnScreenKeyboardService: OnScreenKeyboardService) {
+        constructor(private $http: ng.IHttpService,
+            private $window: ng.IWindowService,
+            private OnScreenKeyboardService: OnScreenKeyboardService) {
         }
 
         public determineResults(): void {
-            if (this.alphabet == "" || this.searchTerms == "") {
-                this.errorMessage = "Both the alphabet and the search terms are required to determine the results.";
+            if (this.keyboardLayout == "" || this.searchTerms == "") {
+                this.errorMessage = "Both the keyboard layout and the search terms are required to determine the results.";
                 this.isVisibleErrorMessage = true;
                 return;
             }
 
             this.isVisibleErrorMessage = false;
-            this.results = this.OnScreenKeyboardService.calculateResults(this.alphabet, this.searchTerms);
 
-            if (this.results == null || this.results == "") {
-                this.errorMessage = "Something went wrong with determining the results. Check the alphabet and search terms and try again.";
+            var promise = this.OnScreenKeyboardService.calculateResults(this.keyboardLayout, this.searchTerms);
+            
+            promise.then((response: ng.IHttpPromiseCallbackArg<string>) => {
+                this.results = response.data;
+
+                if (this.results == null || this.results == "") {
+                    this.errorMessage = "No results found. Check the keyboard layout and search terms and try again.";
+                    this.isVisibleErrorMessage = true;
+                }
+            }).catch(((reason: ng.IHttpPromiseCallbackArg<string[]>) => {
                 this.isVisibleErrorMessage = true;
-            }
+                this.errorMessage = reason.statusText;
+            }));
         }
 
         public clearEntries(): void {
-            this.alphabet = "";
             this.searchTerms = "";
             this.results = "";
 
@@ -61,10 +72,15 @@
             this.isVisibleErrorMessage = false;
         }
 
-        // TODO make this generic for any language (pass in lang, use service to get alphabet?) wasn't working when passing in english\
-        // TODO try using a select instead of a dropdown?
-        public populateEnglish(): void {
-            this.alphabet = this.alphabetPlaceholder;
+        public populateKeyboardLayout(language: string): void {
+            if (language === 'Custom') {
+                this.keyboardLayoutDisabled = false;
+            } else {
+                this.keyboardLayoutDisabled = true;
+                this.keyboardLayout = this.OnScreenKeyboardService.getKeyboardLayout(language);
+            }
+
+            this.selectedKeyboardLayout = language;
         }
     }
 

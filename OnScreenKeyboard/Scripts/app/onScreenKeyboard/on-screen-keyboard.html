@@ -1,16 +1,20 @@
 ﻿<div class="btn-group" role="group">
-    <button id="predefinedAlphabets" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Predefined Alphabets
+    <button id="selectKeyboardLayouts" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select Keyboard Layout
     </button> 
-    <div class="dropdown-menu" aria-labelledby="predefinedAlphabets">
-        <button class="dropdown-item" ng-click="vm.populateEnglish()">English</button>
+    <div class="dropdown-menu" aria-labelledby="selectKeyboardLayouts">
+        <button class="dropdown-item" ng-click="vm.populateKeyboardLayout('Alphabetical English')">Alphabetical English</button>
+        <button class="dropdown-item" ng-click="vm.populateKeyboardLayout('QWERTY English')">QWERTY English</button>
+        <button class="dropdown-item" ng-click="vm.populateKeyboardLayout('Custom')">Custom...</button>
     </div>
 </div>
 
+<h4 ng-show="vm.selectedKeyboardLayout == 'Custom'"><small>Note: Custom keyboards should not include lowercase letters.</small></h4>
+
 <div class="user-inputs form-group">
     <div class="col-md-6">
-        <label>Alphabet:</label>
-        <textarea class="user-input form-control" rows="5" ng-model="vm.alphabet" placeholder="{{vm.alphabetPlaceholder}}"></textarea>
+        <label>Keyboard Layout ({{vm.selectedKeyboardLayout}}):</label>
+        <textarea class="user-input form-control" rows="5" ng-disabled="vm.keyboardLayoutDisabled" ng-model="vm.keyboardLayout"></textarea>
     </div>
     <div class="col-md-6">
         <label>Search Terms:</label>
@@ -27,10 +31,5 @@
     <label>Results:</label>
     {{vm.results}}
 </div>
-
-<!--<h1>The Web API returns the following values:</h1>
-<ul>
-    <li ng-repeat="i in vm.values">{{i}}</li>
-</ul>-->
 
 <p ng-show="vm.isVisibleErrorMessage" class="text-danger">{{vm.errorMessage}}</p>
