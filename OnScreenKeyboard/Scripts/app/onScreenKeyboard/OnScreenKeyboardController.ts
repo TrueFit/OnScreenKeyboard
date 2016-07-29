@@ -34,10 +34,8 @@
 
         results: string = "";
 
-        static $inject: string[] = ["$http", "$window", "OnScreenKeyboardService"];
-        constructor(private $http: ng.IHttpService,
-            private $window: ng.IWindowService,
-            private OnScreenKeyboardService: OnScreenKeyboardService) {
+        static $inject: string[] = ["OnScreenKeyboardService"];
+        constructor(private OnScreenKeyboardService: OnScreenKeyboardService) {
         }
 
         public determineResults(): void {

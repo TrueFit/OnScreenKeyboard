@@ -77,7 +77,10 @@ namespace OnScreenKeyboard.Services
 
                 for (int x = 0; x < characters.Length; x++)
                 {
-                    dictionary.Add(characters[x], new LetterLocation(x, y));
+                    if (!dictionary.ContainsKey(characters[x]))
+                    {
+                        dictionary.Add(characters[x], new LetterLocation(x, y));
+                    }
                 }
             }
 

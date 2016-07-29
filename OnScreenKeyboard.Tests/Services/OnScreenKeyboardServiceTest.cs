@@ -74,5 +74,21 @@ namespace OnScreenKeyboard.Tests.Services
             // Assert
             CollectionAssert.AreEqual(expectedResult, results);
         }
+
+        [TestMethod]
+        public void CalculateResults_WithSameCharactersInDictionary_DoesNotReplaceOldCharacters()
+        {
+            // Arrange
+            OnScreenKeyboardService service = new OnScreenKeyboardService();
+            string repeatedLayout = "AAAAA";
+            string searchTerms = "aaaa";
+            List<char> expectedResult = new List<char> { '#', '#', '#', '#' };
+
+            // Act
+            List<char> results = service.CalculateResults(repeatedLayout, searchTerms);
+
+            // Assert
+            CollectionAssert.AreEqual(expectedResult, results);
+        }
     }
 }

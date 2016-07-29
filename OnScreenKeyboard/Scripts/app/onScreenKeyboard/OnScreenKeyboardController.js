@@ -2,9 +2,7 @@ var App;
 (function (App) {
     "use strict";
     var OnScreenKeyboardController = (function () {
-        function OnScreenKeyboardController($http, $window, OnScreenKeyboardService) {
-            this.$http = $http;
-            this.$window = $window;
+        function OnScreenKeyboardController(OnScreenKeyboardService) {
             this.OnScreenKeyboardService = OnScreenKeyboardService;
             this.errorMessage = "";
             this.isVisibleErrorMessage = false;
@@ -51,10 +49,9 @@ var App;
             }
             this.selectedKeyboardLayout = language;
         };
-        OnScreenKeyboardController.$inject = ["$http", "$window", "OnScreenKeyboardService"];
+        OnScreenKeyboardController.$inject = ["OnScreenKeyboardService"];
         return OnScreenKeyboardController;
     }());
     App.OnScreenKeyboardController = OnScreenKeyboardController;
     angular.module("app").controller("OnScreenKeyboardController", OnScreenKeyboardController);
 })(App || (App = {}));
-//# sourceMappingURL=OnScreenKeyboardController.js.map

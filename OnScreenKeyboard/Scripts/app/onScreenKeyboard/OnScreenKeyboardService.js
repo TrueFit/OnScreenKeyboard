@@ -24,4 +24,3 @@ var App;
     App.OnScreenKeyboardService = OnScreenKeyboardService;
     angular.module("app").service("OnScreenKeyboardService", OnScreenKeyboardService);
 })(App || (App = {}));
-//# sourceMappingURL=OnScreenKeyboardService.js.map
