@@ -45,3 +45,7 @@ Please use whatever technology and techniques you feel are applicable to solve t
 Please fork this repository. When you have completed your solution, please issue a pull request to notify us that you are ready.
 
 Have fun.
+
+Solution
+-------------
+I used AngularJS with TypeScript on the frontend. I used C# for the backend. To run the application, load it in visual studio and run it in Google Chrome.
