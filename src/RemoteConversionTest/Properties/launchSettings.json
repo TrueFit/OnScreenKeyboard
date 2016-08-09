@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RemoteConversionTest": {
+      "commandName": "Project",
+      "commandLineArgs": "..\\..\\..\\example.txt"
+    }
+  }
+}

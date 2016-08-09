@@ -1,0 +1,9 @@
+C:\Users\joshu_000\Desktop\RemoteConversionTest\src\RemoteConversionTest_x86-64\RemoteConversionTest_x86-64\bin\Debug\RemoteConversionTest_x86-64.exe.config
+C:\Users\joshu_000\Desktop\RemoteConversionTest\src\RemoteConversionTest_x86-64\RemoteConversionTest_x86-64\bin\Debug\RemoteConversionTest_x86-64.exe
+C:\Users\joshu_000\Desktop\RemoteConversionTest\src\RemoteConversionTest_x86-64\RemoteConversionTest_x86-64\bin\Debug\RemoteConversionTest_x86-64.pdb
+C:\Users\joshu_000\Desktop\RemoteConversionTest\src\RemoteConversionTest_x86-64\RemoteConversionTest_x86-64\obj\Debug\RemoteConversionTest_x86-64.exe
+C:\Users\joshu_000\Desktop\RemoteConversionTest\src\RemoteConversionTest_x86-64\RemoteConversionTest_x86-64\obj\Debug\RemoteConversionTest_x86-64.pdb
+C:\Users\joshu_000\Desktop\RemoteConversionTest\src\RemoteConversionTest_x86-64\RemoteConversionTest_x86-64\bin\Debug\example.txt
+C:\Users\joshu_000\Desktop\RemoteConversionTest\src\RemoteConversionTest_x86-64\RemoteConversionTest_x86-64\bin\Debug\RemoteConversion_x86-64.dll
+C:\Users\joshu_000\Desktop\RemoteConversionTest\src\RemoteConversionTest_x86-64\RemoteConversionTest_x86-64\bin\Debug\RemoteConversion_x86-64.pdb
+C:\Users\joshu_000\Desktop\RemoteConversionTest\src\RemoteConversionTest_x86-64\RemoteConversionTest_x86-64\obj\Debug\RemoteConversionTest_x86-64.csprojResolveAssemblyReference.cache
