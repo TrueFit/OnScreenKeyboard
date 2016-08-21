@@ -8,6 +8,7 @@ namespace OnScreenKeyboard
 {
     public interface ILogger
     {
+        void Debug(string msg);
         void Info(string msg);
         void Error(string msg, Exception ex = null);
     }
@@ -16,6 +17,11 @@ namespace OnScreenKeyboard
     // something more full-featured, like log4net, should be used.
     public class Logger : ILogger
     {
+        public void Debug(string msg)
+        {
+            Console.Out.WriteLine(msg);
+        }
+
         public void Info(string msg) 
         {
             Console.Out.WriteLine(msg);

@@ -13,6 +13,8 @@ namespace OnScreenKeyboard
         // This has been omitted for expediency.
         static ILogger _logger = new Logger();
         static IInputParser _inputParser = new InputParser();
+        static IKeyboardModel _keyboard = new KeyboardModel();
+        static IKeyboardNavigator _keyboardNavigator = new KeyboardNavigator(_keyboard);
 
         static void Main(string[] args)
         {
@@ -37,8 +39,6 @@ namespace OnScreenKeyboard
             try
             {
                 inputData = _inputParser.Parse(inputFile);
-                //foreach (var data in inputData)
-                //    Console.Out.WriteLine(data);
             }
             catch (Exception ex)
             {
@@ -46,8 +46,27 @@ namespace OnScreenKeyboard
                 return;
             }
 
+            // generate the output
+            try
+            {
+                var outputData = new List<string>();
+                foreach (var input in inputData)
+                {
+                    _logger.Debug("Input:");
+                    _logger.Debug(input);
+                    var path = _keyboardNavigator.PathTo(input);
 
-
+                    outputData.Add(path);
+                    _logger.Debug("Output:");
+                    _logger.Debug(path);
+                }
+                File.WriteAllLines(outputFile, outputData);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(string.Format("Error processing file {0}", inputFile), ex);
+                return;
+            }
         }
         static bool ValidInputs(string[] args, out string inputFile, out string outputFile)
         {

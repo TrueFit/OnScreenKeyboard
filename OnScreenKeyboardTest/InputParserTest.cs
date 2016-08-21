@@ -11,7 +11,7 @@ namespace OnScreenKeyboardTest
         private IInputParser _parser = new InputParser();
 
         [TestMethod]
-        public void BaseTest()
+        public void ParseValidInputTest()
         {
             var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"TestData\input.txt");
             var rc = _parser.Parse(path);
@@ -21,7 +21,7 @@ namespace OnScreenKeyboardTest
         }
 
         [TestMethod]
-        public void BlankLinesTest()
+        public void ParseBlankLinesTest()
         {
             var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"TestData\inputBlankLines.txt");
             var rc = _parser.Parse(path);
@@ -32,7 +32,7 @@ namespace OnScreenKeyboardTest
 
         [TestMethod]
         [ExpectedException(typeof(FileNotFoundException))]
-        public void InvalidFileTest()
+        public void ParseInvalidFileTest()
         {
             var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"TestData\nosuchfile.txt");
             var rc = _parser.Parse(path);
