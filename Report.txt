@@ -1,0 +1,48 @@
+OnScreenKeyboard
+Eric Hsiung, Aug 22, 2016
+
+To compile:
+   Open OnScreenKeyboard.sln in Visual Studio 2013 update 5.
+   Select Build - Build Solution.
+
+To run:
+   From the command prompt, locate the OnScreenKeyboard.exe excutable.
+   Then execute something like:
+        OnScreenKeyboard ..\..\input.txt ..\..\output.txt
+   You should see console output similar to:
+	Input:
+	IT Crowd
+	Output:
+	D,R,R,#,D,D,L,#,S,U,U,U,R,#,D,D,R,R,R,#,L,L,L,#,D,R,R,#,U,U,U,L,#
+	Input:
+	More cowbell
+	Output:
+	D,D,#,R,R,#,R,R,R,#,U,U,L,#,S,L,L,#,D,D,#,D,R,R,#,U,U,U,L,L,L,#,R,R,R,#,D,R,#,#
+	Input:
+	Klaatu barada nikto
+	Output:
+	D,R,R,R,R,#,R,#,U,L,L,L,L,L,#,#,D,D,D,R,#,R,#,S,U,U,U,L,#,L,#,D,D,R,R,R,R,R,#,U,
+	U,L,L,L,L,L,#,R,R,R,#,L,L,L,#,S,D,D,R,#,U,R,#,R,R,#,D,D,L,L,L,#,U,R,#
+
+   The output is also saved to the output file specified on the command line.
+
+OnScreenKeyboard is the main project, and OnScreenKeyboardTest is for unit tests, which 
+use the standard Visual Studio Microsoft.VisualStudio.TestTools.UnitTesting framework.
+
+In a production environment, better input validation, logging, dependency injection, 
+unit tests, etc. would be needed. What's provided for this assignment is functional but 
+bare-bones.
+
+In production environments internationalization must be considered. To address this, all
+locale-specific information (such as the displayed characters and keyboard layout) is encapsulated
+in the KeyboardModel. So, for example, to implement a French keyboard just requires creating
+a new KeyboardModel class that implements the IKeyboardModel interface.
+
+KeyboardNavigator is the primary class, it takes a KeyboardModel and generates the keyboard
+navigation sequence from the input string.
+
+All the code is written just for this assignment, there is no "borrowed" code of any sort.
+Sites like MSDN and StackOverflow were referenced for some code syntax questions.
+
+
+
