@@ -54,10 +54,6 @@ bool Keyboard_Cl::initializeKeyboardLayout()
 				pair<int, int> coords(row, col);
 				char myKey = toupper(keyboardRow.at(col));
 				m_keyboardMap[myKey] = coords;
-
-				// lets read the map back
-				cout << "char:" << toupper(keyboardRow.at(col));
-				cout << "item inserted at" << m_keyboardMap[myKey].first << " " << m_keyboardMap[myKey].second << endl;
 			}
 			
 			keyboardRows.pop();
@@ -115,10 +111,6 @@ string Keyboard_Cl::findPathToChar(char c)
 	if (m_keyboardMap.find(toupper(c)) != m_keyboardMap.end())
 	{
 		pair<int,int> coords = m_keyboardMap.find(toupper(c))->second;
-
-		// lets read the map back
-		cout << "ITEM FOUND char:" << toupper(c);
-		cout << " at" << coords.first << " " << coords.second << endl;
 
 		// we have coordinates... figure out how to get from cursor to the current location.
 		// find the difference between our current row, and the character row

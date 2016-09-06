@@ -6,7 +6,6 @@
 * 
 * Author: kbender
 */
-#include "stdafx.h"
 #include <iostream>
 #include <string>
 #include "FileUtility.h"
