@@ -1,0 +1,10 @@
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple\bin\Debug\Log\Log.txt
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple\bin\Debug\Simple.exe.config
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple\bin\Debug\Simple.exe
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple\bin\Debug\Simple.pdb
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple\bin\Debug\Simple.Library.dll
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple\bin\Debug\Simple.Library.pdb
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple\obj\Debug\Simple.csprojResolveAssemblyReference.cache
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple\obj\Debug\Simple.exe
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple\obj\Debug\Simple.pdb
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple\bin\Debug\Input\SearchTerms.txt
