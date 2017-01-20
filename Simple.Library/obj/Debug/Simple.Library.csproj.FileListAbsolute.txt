@@ -1,0 +1,5 @@
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple.Library\bin\Debug\Simple.Library.dll
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple.Library\bin\Debug\Simple.Library.pdb
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple.Library\obj\Debug\Simple.Library.dll
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple.Library\obj\Debug\Simple.Library.pdb
+C:\Users\alevine\Desktop\Personal\TrueFit\Simple\Simple.Library\obj\Debug\Simple.Library.csprojResolveAssemblyReference.cache
