@@ -1,0 +1,166 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace AutoKey
+{
+    public class TextToKey
+    {
+        public static string GetCursorCmd(string filePath)
+        {
+            string result = CursorCommand(filePath);
+            return result;
+
+        }
+
+        //method to accept input file
+        private static string CursorCommand(string filePath)
+        {
+            string cmdString = "";
+            string line;
+
+            //check that file still exists
+            if (File.Exists(filePath))
+            {
+                StreamReader file = null;
+                try
+                {
+                    //iterate through each line
+                    file = new StreamReader(filePath);
+                    while ((line = file.ReadLine()) != null)
+                    {
+                        cmdString += LineProcessor(line);
+                    }
+                }
+                finally
+                {
+                    if (file != null)
+                        file.Close();
+                }
+            }
+
+
+            return cmdString;
+        }
+
+        private static string LineProcessor(string line)
+        {
+            int oCol = 0;
+            int oRow = 0;
+            int nCol = 0;
+            int nRow = 0;
+            int colDif;
+            int rowDif;
+            string vDir;
+            string hDir;
+            string vCursor;
+            string hCursor;
+            string cmdString = string.Empty;
+
+            //iterate through each character in line
+            foreach (char c in line)
+            {
+                //any spaces will just return "S"
+                if (c.ToString() == " ")
+                {
+                    cmdString += "S,";
+                }
+                //we only want to process alphanumeric characters
+                //all others will be ignored
+                if (Char.IsLetter(c) || Char.IsNumber(c))
+                {
+                    //recreate the keyboard in a two dimensional array
+                    string[,] Kbrd = new string[6, 6];
+                    //populate rows
+                    for (int i = 0; i < 6; i++)
+                    {
+                        Kbrd[0, i] = Convert.ToChar(i + 65).ToString();
+                        Kbrd[1, i] = Convert.ToChar(i + 71).ToString();
+                        Kbrd[2, i] = Convert.ToChar(i + 77).ToString();
+                        Kbrd[3, i] = Convert.ToChar(i + 83).ToString();
+                        Kbrd[5, i] = Convert.ToChar(i + 53).ToString();
+                        //populate 5th row manualy since its both letters and numbers
+                        Kbrd[4, 0] = "Y";
+                        Kbrd[4, 1] = "Z";
+                        Kbrd[4, 2] = "1";
+                        Kbrd[4, 3] = "2";
+                        Kbrd[4, 4] = "3";
+                        Kbrd[4, 5] = "4";
+                        //fix last value in row 6
+                        Kbrd[5, 5] = "0";
+
+                    }
+                    //find position of letter
+                    for (int i = 0; i < 6; i++)
+                    {
+                        for (int j = 0; j < 6; j++)
+                        {
+                            if (Kbrd[i, j] == c.ToString())
+                            {
+                                nCol = i;
+                                nRow = j;
+                            }
+                        }
+                    }
+
+
+                    // compare to old position
+                    colDif = nCol - oCol;
+                    rowDif = nRow - oRow;
+
+                    //store new position as old position
+                    oCol = nCol;
+                    oRow = nRow;
+                    //assign directions
+                    if (colDif > 0)
+                    {
+                        vDir = "D";
+                    }
+                    else
+                    {
+                        vDir = "U";
+                    }
+                    if (rowDif > 0)
+                    {
+                        hDir = "R";
+                    }
+                    else
+                    {
+                        hDir = "L";
+                    }
+
+                    int absV = Math.Abs(colDif);
+                    int absH = Math.Abs(rowDif);
+
+                    //repeat commands based on position difference
+                    vCursor = String.Concat(Enumerable.Repeat(vDir + ",", absV));
+                    hCursor = String.Concat(Enumerable.Repeat(hDir + ",", absH));
+
+                    //store commands
+                    cmdString += vCursor + hCursor + "#,";
+                }
+                else
+                {
+                    // do nothing
+                }
+
+            }
+            //remove last comma
+            cmdString = cmdString.Remove(cmdString.Length - 1);
+            return cmdString + Environment.NewLine;
+        }
+
+
+    }
+
+}
