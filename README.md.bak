@@ -5,12 +5,6 @@ How to Use
 ----------
 This console application accepts two parameters. The first parameter is the input file. The second parameter is an output file and it is optional. The output will also be displayed in the console.
 
-Solution Overview
------------------
-I structured the solution into two pieces. The OnScreenKeyboard project has an InputProcessor class that can take the input string and convert it into the output string. The InputProcessor accepts a Keyboard object that implements the IKeyboard interface in its constructor. The Keyboard object has a method that scripts the path between two characters. 
-By structuring it this way, we can easily re-use the InputProcessor with different keyboard layouts. The InputReader project contains the DVRKeyboard class being used for this exercise. It consists of a dictionary of KeyboardButton objects that are indexed by the character the button represents. Each KeyboardButton has an x and y coordinate value.
-The GetPath method takes the two characters we need to get the path between and identifies the corresponding buttons in the dictionary. Then, using the x and y coordianates, we can build the path needed.
-
 The Problem
 -----------
 On screen keyboards are the bane of DVR users. To help alleviate the pain, one local company is asking you to implement part of a voice to text search for their DVR by developing an algorithm to script the on screen keyboard.
