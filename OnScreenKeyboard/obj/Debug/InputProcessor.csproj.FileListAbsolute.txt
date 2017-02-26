@@ -1,0 +1,4 @@
+C:\Test\OnScreenKeyboard\OnScreenKeyboard\bin\Debug\OnScreenKeyboard.dll
+C:\Test\OnScreenKeyboard\OnScreenKeyboard\bin\Debug\OnScreenKeyboard.pdb
+C:\Test\OnScreenKeyboard\OnScreenKeyboard\obj\Debug\OnScreenKeyboard.dll
+C:\Test\OnScreenKeyboard\OnScreenKeyboard\obj\Debug\OnScreenKeyboard.pdb

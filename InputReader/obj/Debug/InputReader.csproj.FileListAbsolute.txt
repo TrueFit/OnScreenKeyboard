@@ -1,0 +1,8 @@
+C:\Test\OnScreenKeyboard\InputReader\bin\Debug\InputReader.exe.config
+C:\Test\OnScreenKeyboard\InputReader\obj\Debug\InputReader.csprojResolveAssemblyReference.cache
+C:\Test\OnScreenKeyboard\InputReader\bin\Debug\InputReader.exe
+C:\Test\OnScreenKeyboard\InputReader\bin\Debug\InputReader.pdb
+C:\Test\OnScreenKeyboard\InputReader\bin\Debug\OnScreenKeyboard.dll
+C:\Test\OnScreenKeyboard\InputReader\bin\Debug\OnScreenKeyboard.pdb
+C:\Test\OnScreenKeyboard\InputReader\obj\Debug\InputReader.exe
+C:\Test\OnScreenKeyboard\InputReader\obj\Debug\InputReader.pdb

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputReader", "InputReader.csproj", "{B8508CB6-D63F-46EC-911C-0291450022DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputProcessor", "..\OnScreenKeyboard\InputProcessor.csproj", "{27F797A7-E6A0-4567-92A2-53D87382BA5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8508CB6-D63F-46EC-911C-0291450022DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8508CB6-D63F-46EC-911C-0291450022DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8508CB6-D63F-46EC-911C-0291450022DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8508CB6-D63F-46EC-911C-0291450022DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27F797A7-E6A0-4567-92A2-53D87382BA5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F797A7-E6A0-4567-92A2-53D87382BA5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F797A7-E6A0-4567-92A2-53D87382BA5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F797A7-E6A0-4567-92A2-53D87382BA5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
