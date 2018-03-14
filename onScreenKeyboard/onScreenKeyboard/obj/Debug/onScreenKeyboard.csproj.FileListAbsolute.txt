@@ -1,0 +1,6 @@
+c:\users\glenn\documents\visual studio 2015\Projects\onScreenKeyboard\onScreenKeyboard\bin\Debug\onScreenKeyboard.exe.config
+c:\users\glenn\documents\visual studio 2015\Projects\onScreenKeyboard\onScreenKeyboard\bin\Debug\onScreenKeyboard.exe
+c:\users\glenn\documents\visual studio 2015\Projects\onScreenKeyboard\onScreenKeyboard\bin\Debug\onScreenKeyboard.pdb
+c:\users\glenn\documents\visual studio 2015\Projects\onScreenKeyboard\onScreenKeyboard\obj\Debug\onScreenKeyboard.exe
+c:\users\glenn\documents\visual studio 2015\Projects\onScreenKeyboard\onScreenKeyboard\obj\Debug\onScreenKeyboard.pdb
+C:\Users\Glenn\documents\visual studio 2015\Projects\onScreenKeyboard\onScreenKeyboard\obj\Debug\onScreenKeyboard.csprojResolveAssemblyReference.cache
