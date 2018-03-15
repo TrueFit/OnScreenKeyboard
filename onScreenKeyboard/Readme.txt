@@ -1,0 +1,32 @@
+There is a file in ScreenKeyboard\onScreenKeyboard\bin\Debugfolder that I used to test.
+
+On Screen Keyboard
+The Problem
+On screen keyboards are the bane of DVR users. To help alleviate the pain, one local company is asking you to implement part of a voice to text search for their DVR by developing an algorithm to script the on screen keyboard. The keyboard is laid out as follows:
+ABCDEF
+GHIJKL
+MNOPQR
+STUVWX
+YZ1234
+567890
+Please write a program which scripts the path of the cursor on the keyboard. The program should:
+Accept a flat file as input. 
+Each new line will contain a search term
+Output the path for the DVR to execute for each line 
+Assume the cursor will always start on the A
+Use the following characters to make up the path 
+U = up
+D = down
+L = left
+R = right
+S = space
+# = select
+Comma delimit the result
+Sample Input
+IT Crowd
+Sample Output
+D,R,R,#,D,D,L,#,S,U,U,U,R,#,D,D,R,R,R,#,L,L,L,#,D,R,R,#,U,U,U,L,#
+The Fine Print
+Please use whatever technology and techniques you feel are applicable to solve the problem. We suggest that you approach this exercise as if this code was part of a larger system. The end result should be representative of your abilities and style.
+Please fork this repository. When you have completed your solution, please issue a pull request to notify us that you are ready.
+Have fun.
