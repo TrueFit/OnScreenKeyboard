@@ -24,5 +24,14 @@ class Keypad:
     return self.keypad
   
   def get_coordinates(self, character:string) -> tuple:
-    pass
+    print(self.keypad)
+    for index in range(len(self.keypad)):
+      if character in self.keypad[index]:
+        x = index
+        y = self.keypad[index].index(character)
+        coordinate = (x, y)
+        return coordinate
 
+k = Keypad()
+k.generate()
+k.get_coordinates('0')
