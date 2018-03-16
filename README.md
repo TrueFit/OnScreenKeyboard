@@ -1,3 +1,10 @@
+Hello! To run this program, please make sure Python 3.6 is installed on your machine and run:
+`python3 main.py`
+
+I hope to meet you all soon!
+
+--Will Van Pelt
+
 On Screen Keyboard
 ==================
 
