@@ -8,6 +8,7 @@ class Keypad:
     self.numbers = self.swap_zero(list(string.digits))
     self.letters_and_numbers = self.letters + self.numbers
     self.keypad = list()
+    self.output = str()
 
   def swap_zero(self, numbers: list) -> list:
     """ Moves the 0 in a list of digits to the last index """
@@ -45,8 +46,30 @@ class Keypad:
       y_distance = 'L,' * abs(ending_point[1] - starting_point[1])
     else:
       y_distance = 'R,' * abs(ending_point[1] - starting_point[1])
-    print(x_distance, y_distance)
+    return x_distance + y_distance + '#,'
 
 k = Keypad()
 k.generate()
-k.calculate_path('G', '1')
+test_string = 'A' + "IT CROWD"
+
+for index in range(len(test_string) -1):
+  start = test_string[index]
+  end = test_string[index + 1]
+  if end == ' ':
+    k.output += 'S,'
+    end = test_string[index + 2]
+    k.output += k.calculate_path(start, end)
+  elif start == ' ':
+    start = test_string[index + 1]
+    k.output += k.calculate_path(start, end)
+  else:
+    k.output += k.calculate_path(start, end)
+print(k.output[0:-1])
+
+
+# Bugs and fixes
+# Remove extra '#' that occurs in test string 'IT CROWD'
+# Create input file
+# Change loop structure based on file input
+  
+    
