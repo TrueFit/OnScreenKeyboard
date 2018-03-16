@@ -1,4 +1,5 @@
 import string
+import sys
 
 class Keypad:
 
@@ -24,14 +25,28 @@ class Keypad:
     return self.keypad
   
   def get_coordinates(self, character:string) -> tuple:
-    print(self.keypad)
-    for index in range(len(self.keypad)):
+    """ Assigns a coordinate tuple for the character provided in the list """
+    for index in range(len(self.keypad)): # Switch to try/catch block later
       if character in self.keypad[index]:
         x = index
         y = self.keypad[index].index(character)
-        coordinate = (x, y)
+        coordinate = (int(x), int(y))
         return coordinate
+  
+  def calculate_path(self, start:str, finish:str) -> str:
+    """ Determine the keypad movement between two coordinates """
+    starting_point = self.get_coordinates(start)
+    ending_point = self.get_coordinates(finish)
+    if starting_point[0] > ending_point[0]:
+      x_distance = 'U,' * abs(ending_point[0] - starting_point[0])
+    else:
+      x_distance = 'D,' * abs(starting_point[0] - ending_point[0])
+    if starting_point[1] > ending_point[1]:
+      y_distance = 'L,' * abs(ending_point[1] - starting_point[1])
+    else:
+      y_distance = 'R,' * abs(ending_point[1] - starting_point[1])
+    print(x_distance, y_distance)
 
 k = Keypad()
 k.generate()
-k.get_coordinates('0')
+k.calculate_path('G', '1')
