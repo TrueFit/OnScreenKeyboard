@@ -1,3 +1,6 @@
+// This program takes a new-line-delimited series of strings and uses 
+//   them to generate paths to navigate an on-screen keyboard.
+ 
 const keyboard = [
                   ['A','B','C','D','E','F'],
                   ['G','H','I','J','K','L'],
@@ -47,12 +50,24 @@ const inputFromVoice = (str, keyboard) => {
                             ...Array(yDiff).fill(yChangeChar),
                             '#'];
           selector = [keyboard.indexOf(arr), arr.indexOf(el)];
-
           return true;
         }
       });
     }
   }
-
   return outputSequence.join(',');
 }
+
+const fs = require('fs');
+data = fs.readFile('inputs.txt', 'utf8', (err, data) => {
+  let seqArray = [];
+
+  if (err) throw err;
+  data = data.split(/\r?\n/);
+
+  for(let title of data) {
+    seqArray.push(inputFromVoice(title, keyboard));
+  }
+  console.log(seqArray);
+  return seqArray;
+});
