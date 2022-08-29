@@ -1,0 +1,18 @@
+*{
+  font-family: "Open Sans", sans-serif;
+}
+body{
+  background-image: url('./images/retro.webp');
+  background-position: center;
+}
+
+.keyButton {
+    border-radius: 0;
+    margin: 8px 8px;
+    font-size: 2em;
+    padding: 10px;
+}
+
+.kb-output {
+  min-height:20vh;
+}
