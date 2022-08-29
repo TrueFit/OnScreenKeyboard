@@ -23,6 +23,12 @@
 <body>
   <div id="skip"><a href="#main" class="sr-only sr-only-focusable">Skip to main content</a></div>
   <div class="site-overlay" aria-hidden="true"></div>
+  <audio id="selected" class="sr-only">
+    <source src="./assets/Select.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="spacePress" class="sr-only">
+    <source src="./assets/Space.mp3" type="audio/mpeg">
+  </audio>
 
   <header class="container mt-2">
     <nav class="navbar bg-light p-3">
@@ -44,9 +50,9 @@
           </div>
 
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="IT Crowd" aria-label="Search Term"
-              aria-describedby="submitSearch">
-            <button class="btn btn-dark text-light" type="button" id="submitSearch"><span class="fa fa-microphone"></span></button>
+            <input type="text" class="form-control" placeholder="IT Crowd" aria-label="Search Term" value=""
+              aria-describedby="kb-search" id="kb-search-text">
+            <button class="btn btn-dark text-light" type="button" id="kb-search"><span class="fa fa-microphone"></span><span class="sr-only"></span></button>
           </div>
 
           <label for="keyboardSelect" class="form-label">Choose a Keyboard (WIP)</label>
@@ -61,13 +67,12 @@
 
         <hr/>
         <div class="card bg-success m-3 p-3 text-light kb-output">
-          <h2>Output:</h2>
+          <h2>Output</h2>
           <hr />
-          <span id="kb-output"></span>
+          <p id="kb-output"></p>
         </div>
       </section>
     </div>
-
   </main>
   <footer></footer>
 </body>

@@ -11,6 +11,21 @@ body{
     margin: 8px 8px;
     font-size: 2em;
     padding: 10px;
+    transition: background 0.5s ease;
+}
+
+.press{
+  background:black;
+  color:white;
+}
+
+.select{
+  background: rgb(25,135,8);
+  color:white;
+}
+
+.space{
+  background: yellow;
 }
 
 .kb-output {
