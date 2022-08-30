@@ -44,15 +44,24 @@
       <section id="kb-io" class="bg-light bg-gradient col-4 card pt-3">
         <fieldset class="p-3 mb-3">
           <legend>Input</legend>
+          
           <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="inputMode" checked>
-            <label class="form-check-label" for="inputMode">Simple Mode</label>
+            <input class="form-check-input checked" type="checkbox" role="switch" id="inputMode" checked="checked">
+            <label class="form-check-label" for="inputMode">Toggle Modes</label>
           </div>
 
-          <div class="input-group mb-3">
+          <div class="input-group mb-3" id="kb-simple-text">
             <input type="text" class="form-control" placeholder="IT Crowd" aria-label="Search Term" value=""
               aria-describedby="kb-search" id="kb-search-text">
-            <button class="btn btn-dark text-light" type="button" id="kb-search"><span class="fa fa-microphone"></span><span class="sr-only"></span></button>
+            <button class="btn btn-dark text-light" type="button" id="kb-search"><span
+                class="fa fa-microphone"></span><span class="sr-only"></span></button>
+          </div>
+
+          <div class="mb-3 kb-file-selector" id="kb-file-selector">
+            <label for="file-selector" class="form-label">Upload Text to read</label>
+            <input class="form-control" type="file" id="file-selector" accept=".txt">
+            <p id="status"></p>
+            <div id="fileInput"></div>
           </div>
 
           <label for="keyboardSelect" class="form-label">Choose a Keyboard (WIP)</label>
@@ -65,11 +74,11 @@
           </datalist>
         </fieldset>
 
-        <hr/>
-        <div class="card bg-success m-3 p-3 text-light kb-output">
+        <hr />
+        <div class="card bg-success m-3 p-3 text-light kb-output" id="kb-output">
           <h2>Output</h2>
           <hr />
-          <p id="kb-output"></p>
+
         </div>
       </section>
     </div>

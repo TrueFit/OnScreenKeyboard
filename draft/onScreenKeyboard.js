@@ -1,5 +1,4 @@
 const keyboardArea = document.getElementById("keyboard");
-const directions = ["U", "D", "L", "R", "S", "#"]
 const defaultKeyboard = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 const defaultSize = 6;
 const defaultName = "Default";
@@ -68,9 +67,8 @@ function createKeyboardLayout(keyboard, kbArea = keyboardArea, name = defaultNam
   //Footer
   const spaceBar = document.createElement("button");
   spaceBar.className = "col btn btn-outline-dark btn-lg keyButton mb-5";
-  spaceBar.innerHTML = `Space`;
-  kbArea.appendChild(
-    spaceBar);
+  spaceBar.innerHTML = `Spacebar`;
+  kbArea.appendChild(spaceBar);
 
 }
 
@@ -117,90 +115,148 @@ function createButtonColumns(button) {
  */
 function onScreenKeyboardSearch(keyboard, size = defaultSize, searchText) {
   //If keyboard or search term aren't available, return an empty string
-  if(keyboard==null || keyboard.length === 0 || searchText === null || searchText === undefined) return "";
-  //example DRR#SULL#DD#SURRU#DD##URRR# (I AM COOL)
+  if (keyboard == null || keyboard.length === 0 || searchText === null || searchText === undefined) return "";
   const result = [];
-  let quotient = 0; //allows us to look up and down
-  let remainder = 0; //allow us to look left and right
+  let positionY = 0; //allows us to look up and down
+  let positionX = 0; //allow us to look left and right
 
-  for(const char of searchText){
-    console.log(`Graph Direction (${quotient}, ${remainder})`)
-
+  for (const char of searchText) {
     const charIndex = keyboard.indexOf(char);
-    let nQuotient = Math.floor(charIndex / size);
-    let nRemainder = charIndex % size;
 
-    if( charIndex < 0){
+    let relPositionY = Math.floor(charIndex / size);
+    let relPositionX = charIndex % size;
+
+    if (charIndex < 0) {
       result.push('S');
       continue;
-    } 
-    
-    let deltaQuotient = nQuotient - quotient;
-    for(let i=0; i< Math.abs(deltaQuotient);i++){
-      deltaQuotient > 0 ? result.push("D") : result.push("U");
-    }
-    
-    let deltaRemainder = nRemainder - remainder;
-    for(let i=0; i< Math.abs(deltaRemainder);i++){
-      deltaRemainder > 0 ? result.push("R") : result.push("L");
     }
 
-    
-    
+    const deltapositionY = relPositionY - positionY;
+    for (let i = 0; i < Math.abs(deltapositionY); i++) {
+      deltapositionY > 0 ? result.push("D") : result.push("U");
+    }
+
+    const deltapositionX = relPositionX - positionX;
+    for (let i = 0; i < Math.abs(deltapositionX); i++) {
+      deltapositionX > 0 ? result.push("R") : result.push("L");
+    }
+
     result.push('#');
-    quotient = nQuotient;
-    remainder = nRemainder;
-
-
+    positionY = relPositionY;
+    positionX = relPositionX;
   }
-
-
 
   return result.join(",");
 }
 
-/**Fetches the search text from a simple input
+/**Fetches the search text from an input, input toggled by a checkbox
  * @param {Array.<string[]>} keyboard
+ * @param {HTMLElement} inputMode boolean check for input mode (simple or file)
  */
-function fetchKeyboardSearchText(keyboard) {
-  //Read from Input
-  document.getElementById("kb-search").addEventListener("click", () => {
-    const searchText = document.getElementById("kb-search-text").value.toUpperCase();
+function fetchKeyboardSearchText(keyboard, inputMode) {
+  const kbSearch = document.getElementById("kb-search");
+  const kbSimpleInput = document.getElementById("kb-simple-text");
+  const kbFileSelector = document.getElementById("kb-file-selector");
 
-    const result = onScreenKeyboardSearch(keyboard, defaultSize, searchText);
-    if (result) {
-      createDirectionOutput(result, document.getElementById("kb-output"));
-      animateKeyboardSearch(result, document.querySelectorAll(".keyButton"), defaultSize);
-    }
+  /**@TODO Fix Toggle */
+  let isIt = true;
+  //Check input Mode and proceed from there
+  if (isIt) {
+    inputMode.setAttribute("checked", "checked");
+    kbSimpleInput.style.display = 'flex';
+    kbFileSelector.style.display = 'none';
 
+    kbSearch.addEventListener("click", () => {
+      const searchText = document.getElementById("kb-search-text").value.toUpperCase();
 
-  });
-  /**@TODO Fetch Search From a File or Stream */
+      const result = onScreenKeyboardSearch(keyboard, defaultSize, searchText);
+
+      if (result) {
+        createDirectionOutput(result, document.getElementById("kb-output"), searchText);
+        animateKeyboardSearch(result, document.querySelectorAll(".keyButton"), defaultSize);
+      }
+    });
+  } else {
+    inputMode.removeAttribute("checked");
+    kbSimpleInput.style.display = 'none';
+    kbFileSelector.style.display = 'block';
+    readTextFile(keyboard);
+  }
 
 }
+
+/**Add Text to Input */
+function readTextFile(keyboard) {
+  const status = document.getElementById('status');
+  const output = document.getElementById('fileInput');
+  const results = [];
+  if (window.FileList && window.File && window.FileReader) {
+    document.getElementById('file-selector').addEventListener('change', event => {
+      output.innerHTML = '';
+      status.textContent = '';
+      const file = event.target.files[0];
+      if (!file.type) {
+        status.textContent = 'Error: The File.type property does not appear to be supported on this browser.';
+        return;
+      }
+      if (!file.type.match('text.*')) {
+        status.textContent = 'Error: The selected file does not appear to be a text.'
+        return;
+      }
+      const reader = new FileReader();
+      reader.addEventListener('load', event => {
+        const lines = event.target.result.split(/\n/);
+        for (const line of lines) {
+          const item = document.createElement("p");
+          item.innerHTML = `${line}`;
+          output.appendChild(item);
+
+          const result = onScreenKeyboardSearch(keyboard, defaultSize, line.toUpperCase());
+
+          if (result) {
+            createDirectionOutput(result, document.getElementById("kb-output"), line);
+
+            /**@TODO fix the animation to wait until the previous calls finishes its animation */
+            //animateKeyboardSearch(result, document.querySelectorAll(".keyButton"), defaultSize);
+          }
+          //results.push([line,result]);
+
+        }
+      });
+      reader.readAsText(file);
+    });
+  }
+}
+
 
 /**Creates the Ouptut of a search term in the frontend
  * @param {string} result output directions
  * @param {HTMLElement} output HTML Element where results will be printed
  */
-function createDirectionOutput(result, outputArea) {
-  const output = document.createElement("span");
+function createDirectionOutput(result, outputArea, text = "") {
+  const output = document.createElement("p");
   output.className = "d-block fs-5";
-  output.textContent = `${result}`;
+  output.innerHTML = `<pre class="bg-dark light-text text-center text-wrap pt-2">${text}
+  ${result}</pre>`;
 
   outputArea.appendChild(output);
 }
 
 /**Helper function used to slow down iterations */
-function slowIterate(millisecs){
+function slowIterate(millisecs) {
   return new Promise(resolve => setTimeout(resolve, millisecs));
 }
 
-/**Set the animation */
+/**Set the animation 
+ * @param {string} result string of results
+ * @param {Array.<HTMLELement>} buttons
+ * @param {number} size keyboard size
+*/
 async function animateKeyboardSearch(result, buttons, size = defaultSize) {
   //Always start at the first Key
   let idx = 0;
   buttons[idx].className += " press";
+  await slowIterate(100);
 
   /**U = index - size 
    * D = index + size
@@ -208,8 +264,7 @@ async function animateKeyboardSearch(result, buttons, size = defaultSize) {
    * R = index + 1
    */
   for (let r of result) {
-    if (idx < 0) continue;
-    console.log(idx);
+    if (idx < 0) continue; //Safekeep in case results return something funky
     await slowIterate(200);
     switch (r) {
       case 'U':
@@ -236,13 +291,13 @@ async function animateKeyboardSearch(result, buttons, size = defaultSize) {
         buttons[idx].classList.remove('press');
         buttons[idx].className += " select";
         document.getElementById("selected").play();
-        await slowIterate(400);
+        await slowIterate(300);
         buttons[idx].classList.remove('select');
         break;
       case 'S':
         buttons[buttons.length - 1].className += " space";
         document.getElementById("spacePress").play();
-        await slowIterate(400);
+        await slowIterate(300);
         buttons[buttons.length - 1].classList.remove('space');
         break;
 
@@ -258,8 +313,11 @@ function initAlgorithm() {
   //Keyboard can be changed here
   const kb = createKeyboard(defaultKeyboard, defaultSize);
   createKeyboardLayout(kb, keyboardArea, defaultName);
-  fetchKeyboardSearchText(defaultKeyboard);
 
+  //Toggle the use between file uploader and simple text
+  const inputMode = document.getElementById("inputMode");
+  inputMode.addEventListener('change', fetchKeyboardSearchText(defaultKeyboard, inputMode));
+  //readTextFile();
 
   //Test Case - QWERTY Keyboard
   // const qwerty = createKeyboard("QWERTYUIOPASDFGHJKLZXCVBNM".split(''),10);

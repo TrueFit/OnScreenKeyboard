@@ -28,6 +28,10 @@ body{
   background: yellow;
 }
 
+.kb-file-selector {
+  display: none;
+}
+
 .kb-output {
   min-height:20vh;
 }
