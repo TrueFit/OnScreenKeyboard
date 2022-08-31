@@ -23,6 +23,14 @@ const KeyboardSelect = () =>{
     dispatch({
       type: ACTIONS.SET_KEYBOARD,
       payload: newSelect
+    });
+    dispatch({
+      type: ACTIONS.INPUT_TEXT_FIELD,
+      payload: ''
+    });
+    dispatch({
+      type: ACTIONS.OUTPUT_TEXT,
+      payload: ''
     })
   }
 
