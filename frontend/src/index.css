@@ -1,0 +1,58 @@
+*{
+  font-family: "Open Sans", sans-serif;
+}
+body{
+  background-image: url('./images/retro.webp');
+  background-position: center;
+}
+
+.keyButton {
+    border-radius: 0;
+    margin: 8px 8px;
+    font-size: 2em;
+    padding: 10px;
+    transition: background 0.5s ease;
+}
+
+.keyButton.disabled{
+  background: #ccc;
+}
+
+.press{
+  background:black;
+  color:white;
+}
+
+.select{
+  background: rgb(25,135,8);
+  color:white;
+}
+
+.space{
+  background: yellow;
+}
+
+.kb-input-mode {
+  min-height: 110px;
+}
+
+.kb-file-selector {
+  /* display: none; */
+  border: 1px solid black;
+  padding: 16px;
+  
+}
+
+.kb-file-selector label{
+  font-weight: bold;
+}
+
+.kb-output {
+  min-height:20vh;
+}
+
+#kb-search:hover,
+#kb-searc:focus {
+  background:white;
+  color:black!important; /*Don't like doing this, but BS5 does this on the text-light class*/
+}
