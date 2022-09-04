@@ -26,13 +26,14 @@ class Keyboard {
                 }
 
                 // insert the key
-                this.keys.set(val, { row: rowIndex, col: colIndex });
+                this.keys.set(val.toLowerCase(), { row: rowIndex, col: colIndex });
             });
         });
     }
 
+    // returns a position in the keyboard for a given value
     getKeyPosition(val: string) : Position | null {
-        const position = this.keys.get(val);
+        const position = this.keys.get(val.toLowerCase());
 
         // if the key was found, return its position
         if (position) {
