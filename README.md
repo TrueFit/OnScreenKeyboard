@@ -3,7 +3,7 @@
 ## My Solution
 The solution I have constructed is TypeScript+Node based. To run the project from the source code:
 
-1. Install Node and npm on your machine. This project was tested on Node v16.17.0.
+1. Install Node and NPM on your machine. This project was tested on Node v16.17.0.
 2. Clone this repository
 ```sh 
 git clone https://github.com/oalexander-dev/OnScreenKeyboard.git
