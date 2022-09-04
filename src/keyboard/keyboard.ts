@@ -1,6 +1,6 @@
 /**
  * src/keyboard/keyboard.ts
- * 
+ *
  * Class that represents the keyboard component of the
  * system
  */
@@ -22,17 +22,20 @@ class Keyboard {
             row.forEach((val, colIndex) => {
                 // check for a duplicate key value
                 if (this.keys.has(val)) {
-                    console.warn("Duplicate key detected in layout: " + val);
+                    console.warn('Duplicate key detected in layout: ' + val);
                 }
 
                 // insert the key
-                this.keys.set(val.toLowerCase(), { row: rowIndex, col: colIndex });
+                this.keys.set(val.toLowerCase(), {
+                    row: rowIndex,
+                    col: colIndex
+                });
             });
         });
     }
 
     // returns a position in the keyboard for a given value
-    getKeyPosition(val: string) : Position | null {
+    getKeyPosition(val: string): Position | null {
         const position = this.keys.get(val.toLowerCase());
 
         // if the key was found, return its position
@@ -41,10 +44,9 @@ class Keyboard {
         }
 
         // handle a missing key
-        console.warn("Key not found: " + val);
+        console.warn('Key not found: ' + val);
         return null;
     }
 }
-
 
 export default Keyboard;

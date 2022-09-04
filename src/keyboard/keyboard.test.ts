@@ -1,11 +1,9 @@
 /**
  * src/keyboard/keyboard.test.ts
- * 
+ *
  * Unit tests for the keyboard component
  */
-
 import Keyboard from './keyboard';
-
 
 const layout = [
     ['A', 'B', 'C', 'D', 'E', 'F'],

@@ -1,33 +1,35 @@
 /**
  * src/path-finder/path-finder.ts
- * 
+ *
  * Class that represents the cursor path finder, input can be
  * any Readable stream (socket, file, stdin), with search terms
  * separated by a newline. Output will be the path the cursor
  * should follow, along with spaces and select key presses, one
  * per line, in the same order as the input was read in
  */
+import { exit } from 'node:process';
+import { Readable, Writable } from 'node:stream';
 
-import { exit } from "node:process";
-import { Readable, Writable } from "node:stream";
-
-import Keyboard from "../keyboard";
-
+import Keyboard from '../keyboard';
 
 class PathFinder {
     private keyboard: Keyboard;
     private istream: Readable;
     private ostream: Writable;
 
-    constructor(keyboardLayout: string[][], istream: Readable, ostream: Writable) {
+    constructor(
+        keyboardLayout: string[][],
+        istream: Readable,
+        ostream: Writable
+    ) {
         this.keyboard = new Keyboard(keyboardLayout);
         this.ostream = ostream;
         this.istream = istream;
     }
 
-    // returns a promise that resolves after all data has been read in, 
+    // returns a promise that resolves after all data has been read in,
     // processed, and had its output streamed to the output stream
-    computeCursorPaths() : Promise<boolean> {
+    computeCursorPaths(): Promise<boolean> {
         return new Promise<boolean>((resolve) => {
             this.readInput().then((searchTerms) => {
                 for (const term of searchTerms) {
@@ -42,7 +44,7 @@ class PathFinder {
 
     // returns a promise that resolves after all search terms have been read
     // from the input stream
-    readInput() : Promise<string[]> {
+    readInput(): Promise<string[]> {
         return new Promise<string[]>((resolve) => {
             // read in data until end of file is reached, or CTL+D in command line
             const rawInputChunks: string[] = [];
@@ -55,7 +57,7 @@ class PathFinder {
 
             // when all data is read in, split up into search terms
             this.istream.on('end', () => {
-                // chunks are not guaranteed to be in line form, so combine them 
+                // chunks are not guaranteed to be in line form, so combine them
                 // and then split by newline characters
                 const rawInput = rawInputChunks.join('');
                 const searchTerms = rawInput.split('\n');
@@ -66,14 +68,14 @@ class PathFinder {
     }
 
     // computes the cursor path for one search term
-    getPath(term: string) : string {
+    getPath(term: string): string {
         // initialize cursor's initial position
         let currChar = 'A';
         let currPos = this.keyboard.getKeyPosition(currChar);
 
         // make sure start key was found
         if (!currPos) {
-            console.error("Error: invalid start key: " + currChar);
+            console.error('Error: invalid start key: ' + currChar);
             exit(1);
         }
 
@@ -91,7 +93,7 @@ class PathFinder {
 
             // make sure key exists in keyboard
             if (!destPos) {
-                console.error("Error: invalid key in term: " + term[i]);
+                console.error('Error: invalid key in term: ' + term[i]);
                 exit(1);
             }
 
