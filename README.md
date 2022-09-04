@@ -1,5 +1,31 @@
 # On Screen Keyboard
 
+## My Solution
+The solution I have constructed is TypeScript+Node based. To run the project from the source code:
+
+1. Install Node and npm on your machine. This project was tested on Node v16.17.0.
+2. Clone this repository
+```sh 
+git clone https://github.com/oalexander-dev/OnScreenKeyboard.git
+```
+3. Install the dependencies
+```sh
+cd ./OnScreenKeyboard
+npm install 
+```
+4. Add one search term per line to the `input.txt` file in the root of this project
+5. Run the following command to compile and run the program
+```sh 
+npm start
+```
+
+
+To run the tests for this project, follow steps 1-3 above, then run the following command 
+```sh 
+npm run test
+```
+
+
 ## The Problem
 
 On screen keyboards are the bane of DVR users. To help alleviate the pain, one local company is asking you to implement part of a voice to text search for their DVR by developing an algorithm to script the on screen keyboard.
