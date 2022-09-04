@@ -1,0 +1,25 @@
+{
+  "name": "onscreenkeyboard",
+  "version": "1.0.0",
+  "description": "## The Problem",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --outDir ./dist",
+    "start": "npm run build && node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oalexander-dev/OnScreenKeyboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oalexander-dev/OnScreenKeyboard/issues"
+  },
+  "homepage": "https://github.com/oalexander-dev/OnScreenKeyboard#readme",
+  "devDependencies": {
+    "@types/node": "^18.7.14",
+    "typescript": "^4.8.2"
+  }
+}
