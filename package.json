@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc --outDir ./dist",
     "start": "npm run build && node ./dist/index.js",
-    "format": "prettier --write .",
+    "format": "prettier --write ./src",
     "test": "npx jest"
   },
   "repository": {
