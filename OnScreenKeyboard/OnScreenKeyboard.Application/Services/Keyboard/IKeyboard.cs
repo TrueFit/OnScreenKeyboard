@@ -7,7 +7,7 @@ namespace OnScreenKeyboard.Application.Services.Keyboard
     //Whichever fits the use case better
     public interface IKeyboard
     {
-        public Dictionary<int, Dictionary<int, char>> Keyboard { get; set; }
+        public string GetDirectionFromInput(string line);
     }
 }
 
