@@ -49,19 +49,6 @@ namespace OnScreenKeyboard.Application.Business.Keyboard.Requests
 
                     currentX += horizontalNum;
 
-                    //if (row > currentX)
-                    //{
-                    //    var numberToAdd = row - currentX;
-                    //    currentLineOutput.AddRange(Enumerable.Repeat("D", numberToAdd));
-                    //    currentX += numberToAdd;
-                    //}
-                    //else
-                    //{
-                    //    var numberToSubtract = currentX - row;
-                    //    currentLineOutput.AddRange(Enumerable.Repeat("U", Math.Abs(numberToSubtract)));
-                    //    currentX -= numberToSubtract;
-                    //}
-
                     var verticalNum = column - currentY;
 
                     string verticalDirection = verticalNum > 0 ? "R" : "L";
@@ -69,19 +56,6 @@ namespace OnScreenKeyboard.Application.Business.Keyboard.Requests
                     currentLineOutput.AddRange(Enumerable.Repeat(verticalDirection, Math.Abs(verticalNum)));
 
                     currentY += verticalNum;
-
-                    //if (column > currentY)
-                    //{
-                    //    var numberToAdd = column - currentY;
-                    //    currentLineOutput.AddRange(Enumerable.Repeat("R", numberToAdd));
-                    //    currentY += numberToAdd;
-                    //}
-                    //else
-                    //{
-                    //    var numberToSubtract = currentY - column;
-                    //    currentLineOutput.AddRange(Enumerable.Repeat("L", Math.Abs(numberToSubtract)));
-                    //    currentY -= numberToSubtract;
-                    //}
 
                     currentLineOutput.Add("#");
 
