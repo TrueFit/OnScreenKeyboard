@@ -43,6 +43,18 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.4.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.4.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[11.1.0, )"

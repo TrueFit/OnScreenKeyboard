@@ -21,6 +21,9 @@
     <None Remove="Business\Keyboard\Commands\" />
     <None Remove="Services\" />
     <None Remove="Services\Keyboard\" />
+    <None Remove="FluentValidation" />
+    <None Remove="FluentValidation.AspNetCore" />
+    <None Remove="FluentValidation.DependencyInjectionExtensions" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
@@ -36,5 +39,8 @@
     <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.4.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
   </ItemGroup>
 </Project>

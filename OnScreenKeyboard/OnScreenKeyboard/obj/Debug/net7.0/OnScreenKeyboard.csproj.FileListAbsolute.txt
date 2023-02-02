@@ -40,3 +40,6 @@
 /Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard/obj/Debug/net7.0/OnScreenKeyboard.pdb
 /Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard/obj/Debug/net7.0/OnScreenKeyboard.genruntimeconfig.cache
 /Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard/obj/Debug/net7.0/ref/OnScreenKeyboard.dll
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard/bin/Debug/net7.0/FluentValidation.dll
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard/bin/Debug/net7.0/FluentValidation.AspNetCore.dll
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard/bin/Debug/net7.0/FluentValidation.DependencyInjectionExtensions.dll

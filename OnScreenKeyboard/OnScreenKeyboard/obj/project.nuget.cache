@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "z4a3JGTqeCcVZzphoz/My9vy2pc8uuAlePFFwM0eqHg3Im9bMX9XdPS5ooQ1i2KQjuLftuZjrGTQy+I4EkGq3g==",
+  "dgSpecHash": "NDNY/5laWxIBGzkoG/2tYZRbormahQH9JqjbUtf9n9dYUyMYSV8VxaPfly/6XS7dbSfYup/Xqo5x1vtvHovTfQ==",
   "success": true,
   "projectFilePath": "/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.csproj",
   "expectedPackageFiles": [
+    "/Users/cliffordbateman/.nuget/packages/fluentvalidation/11.4.0/fluentvalidation.11.4.0.nupkg.sha512",
+    "/Users/cliffordbateman/.nuget/packages/fluentvalidation.aspnetcore/11.2.2/fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "/Users/cliffordbateman/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.4.0/fluentvalidation.dependencyinjectionextensions.11.4.0.nupkg.sha512",
     "/Users/cliffordbateman/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",
     "/Users/cliffordbateman/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
     "/Users/cliffordbateman/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.0.0/mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
