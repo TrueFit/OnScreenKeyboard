@@ -39,6 +39,7 @@ namespace OnScreenKeyboard.Application.Business.Keyboard.Requests
                     }
 
                     var row = GetLetterRow(character);
+
                     var column = GetLetterColumn(row, character);
 
                     var horizontalNum = row - currentX;
