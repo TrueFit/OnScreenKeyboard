@@ -22,6 +22,11 @@ namespace OnScreenKeyboard.Application.Services.Keyboard
             }
         }
 
+        //Would probably pull this from somewhere in a prod environment.
+        //Database, json file, xml file etc...
+        //If we were pulling this information and loading the dictionary from somewhere else, ->
+        //The implementation would actually reside in services and be injected there. 
+
         private void LoadKeyboard()
         {
             Keyboard = new Dictionary<int, Dictionary<int, char>>();

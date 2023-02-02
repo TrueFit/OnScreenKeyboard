@@ -13,17 +13,31 @@ namespace OnScreenKeyboard.Controllers
     [Route("api/[controller]")]
     public class KeyboardController : ApiBaseController
     {
-        [HttpPost]
-        public async Task<IActionResult> GetKeyboardOutput(IFormFile file)
+        //Probably should be a get, but Swagger doesn't allow for the file picker on gets. 
+        [HttpPost("file")]
+        [ProducesResponseType(typeof(IList<string>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetKeyboardOutputFromFile(IFormFile file)
         {
             string contents = await file.ReadAsStringAsync();
-            var req = new GetDirectionFromInputCommand
+            var req = new GetDirectionFromInputRequest
             {
                 FileContents = contents
             };
             var res = await Mediator.Send(req);
             return Ok(res);
         }
+
+        //Mostly used for testing, but is also a valid way to recieve feedback without a file.
+        //Also showcases fluent validation
+        //use /r/n in swagger request for new lines
+        [HttpPost()]
+        [ProducesResponseType(typeof(IList<string>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetKeyboardOutputFromRequest(GetDirectionFromInputRequest request)
+        {
+            var res = await Mediator.Send(request);
+            return Ok(res);
+        }
+
     }
 }
 
