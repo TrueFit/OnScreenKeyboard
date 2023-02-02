@@ -1,0 +1,15 @@
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/bin/Debug/net7.0/OnScreenKeyboard.Application.deps.json
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/bin/Debug/net7.0/OnScreenKeyboard.Application.dll
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/bin/Debug/net7.0/OnScreenKeyboard.Application.pdb
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/bin/Debug/net7.0/OnScreenKeyboard.Domain.dll
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/bin/Debug/net7.0/OnScreenKeyboard.Domain.pdb
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/obj/Debug/net7.0/OnScreenKeyboard.Application.csproj.AssemblyReference.cache
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/obj/Debug/net7.0/OnScreenKeyboard.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/obj/Debug/net7.0/OnScreenKeyboard.Application.AssemblyInfoInputs.cache
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/obj/Debug/net7.0/OnScreenKeyboard.Application.AssemblyInfo.cs
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/obj/Debug/net7.0/OnScreenKeyboard.Application.csproj.CoreCompileInputs.cache
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/obj/Debug/net7.0/OnScreenKeyboard.Application.csproj.CopyComplete
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/obj/Debug/net7.0/OnScreenKeyboard.Application.dll
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/obj/Debug/net7.0/refint/OnScreenKeyboard.Application.dll
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/obj/Debug/net7.0/OnScreenKeyboard.Application.pdb
+/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/obj/Debug/net7.0/ref/OnScreenKeyboard.Application.dll

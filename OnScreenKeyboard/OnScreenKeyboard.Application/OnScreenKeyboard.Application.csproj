@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnScreenKeyboard.Domain\OnScreenKeyboard.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Business\" />
+    <None Remove="Common\" />
+    <None Remove="Common\Behaviors\" />
+    <None Remove="MediatR" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Microsoft.Extensions.Logging" />
+    <None Remove="Business\Keyboard\" />
+    <None Remove="Business\Keyboard\Requests\" />
+    <None Remove="Business\Keyboard\Commands\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Keyboard\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Business\" />
+    <Folder Include="Common\" />
+    <Folder Include="Common\Behaviors\" />
+    <Folder Include="Business\Keyboard\" />
+    <Folder Include="Business\Keyboard\Requests\" />
+    <Folder Include="Business\Keyboard\Commands\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Keyboard\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{C162F3E2-270B-46C1-89DC-135D0A16C0D3}|https">
+  <MonoDevelop.Ide.ItemProperties.OnScreenKeyboard.Domain FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.OnScreenKeyboard.Application FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.OnScreenKeyboard FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="OnScreenKeyboard" expanded="True">
+            <Node name="OnScreenKeyboard" expanded="True" selected="True" />
+            <Node name="OnScreenKeyboard.Domain" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.ItemProperties.OnScreenKeyboard.Infrastructure FirstBuild="True" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+</Properties>
