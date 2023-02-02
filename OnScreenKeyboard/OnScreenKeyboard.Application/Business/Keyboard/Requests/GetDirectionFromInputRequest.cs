@@ -31,8 +31,6 @@ namespace OnScreenKeyboard.Application.Business.Keyboard.Requests
             }
             return directions;
         }
-
-
     }
 }
 

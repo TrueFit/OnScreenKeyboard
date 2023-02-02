@@ -13,7 +13,7 @@ namespace OnScreenKeyboard.Application.Services.Keyboard
 
         //UPDATE: After thinking about this a bit more I would break it up a bit differently than originally thought.
         //I would leave this implementation as a 1 dimensional, graph based on screen keyboard.
-        //If the on screen keyboard has a more than one option (special characters button, gif button etc...)
+        //If the on screen keyboard has more than one option (special characters button, gif button etc...)
         //I would then create a different service and implement the logic locally in that service.
         public StandardKeyboard()
         {
@@ -70,6 +70,7 @@ namespace OnScreenKeyboard.Application.Services.Keyboard
         {
             int currentY = 0;
             int currentX = 0;
+
             List<string> currentLineOutput = new List<string>();
 
             foreach (var character in line.ToUpper().ToCharArray())
@@ -131,9 +132,6 @@ namespace OnScreenKeyboard.Application.Services.Keyboard
 
             throw new ArgumentException($"Character {character} not found in keyboard");
         }
-
-
-
     }
 }
 
