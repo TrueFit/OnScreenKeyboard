@@ -13,7 +13,7 @@ namespace Microsoft.Extensions.DependencyInjection
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehavior<,>));
-            services.AddScoped<IKeyboardService, StandardKeyboard>();
+            services.AddScoped<IKeyboard, StandardKeyboard>();
             return services;
         }
     }

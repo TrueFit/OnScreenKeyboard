@@ -11,10 +11,10 @@ namespace OnScreenKeyboard.Application.Business.Keyboard.Requests
 
     public class GetDirectionFromInputCommandHandler : IRequestHandler<GetDirectionFromInputCommand, IList<string>>
     {
-        private readonly IKeyboardService _keyboardService;
-        public GetDirectionFromInputCommandHandler(IKeyboardService keyboardService)
+        private readonly IKeyboard _keyboard;
+        public GetDirectionFromInputCommandHandler(IKeyboard keyboard)
         {
-            _keyboardService = keyboardService;
+            _keyboard = keyboard;
         }
 
         public async Task<IList<string>> Handle(GetDirectionFromInputCommand request, CancellationToken cancellationToken)
@@ -41,39 +41,47 @@ namespace OnScreenKeyboard.Application.Business.Keyboard.Requests
                     var row = GetLetterRow(character);
                     var column = GetLetterColumn(row, character);
 
-                    if (row > currentX)
-                    {
-                        while (currentX < row)
-                        {
-                            currentLineOutput.Add("D");
-                            currentX++;
-                        }
-                    }
-                    else
-                    {
-                        while (currentX > row)
-                        {
-                            currentLineOutput.Add("U");
-                            currentX--;
-                        }
-                    }
+                    var horizontalNum = row - currentX;
 
-                    if (column > currentY)
-                    {
-                        while (currentY < column)
-                        {
-                            currentLineOutput.Add("R");
-                            currentY++;
-                        }
-                    }
-                    else
-                    {
-                        while (currentY > column)
-                        {
-                            currentLineOutput.Add("L");
-                            currentY--;
-                        }
-                    }
+                    string horizontalDirection = horizontalNum > 0 ? "D" : "U";
+
+                    currentLineOutput.AddRange(Enumerable.Repeat(horizontalDirection, Math.Abs(horizontalNum)));
+
+                    currentX += horizontalNum;
+
+                    //if (row > currentX)
+                    //{
+                    //    var numberToAdd = row - currentX;
+                    //    currentLineOutput.AddRange(Enumerable.Repeat("D", numberToAdd));
+                    //    currentX += numberToAdd;
+                    //}
+                    //else
+                    //{
+                    //    var numberToSubtract = currentX - row;
+                    //    currentLineOutput.AddRange(Enumerable.Repeat("U", Math.Abs(numberToSubtract)));
+                    //    currentX -= numberToSubtract;
+                    //}
+
+                    var verticalNum = column - currentY;
+
+                    string verticalDirection = verticalNum > 0 ? "R" : "L";
+
+                    currentLineOutput.AddRange(Enumerable.Repeat(verticalDirection, Math.Abs(verticalNum)));
+
+                    currentY += verticalNum;
+
+                    //if (column > currentY)
+                    //{
+                    //    var numberToAdd = column - currentY;
+                    //    currentLineOutput.AddRange(Enumerable.Repeat("R", numberToAdd));
+                    //    currentY += numberToAdd;
+                    //}
+                    //else
+                    //{
+                    //    var numberToSubtract = currentY - column;
+                    //    currentLineOutput.AddRange(Enumerable.Repeat("L", Math.Abs(numberToSubtract)));
+                    //    currentY -= numberToSubtract;
+                    //}
 
                     currentLineOutput.Add("#");
 
@@ -85,9 +93,9 @@ namespace OnScreenKeyboard.Application.Business.Keyboard.Requests
 
         private int GetLetterRow(char character)
         {
-            foreach (var key in _keyboardService.Keyboard.Keys)
+            foreach (var key in _keyboard.Keyboard.Keys)
             {
-                if (_keyboardService.Keyboard[key].Values.Any(x => x == character))
+                if (_keyboard.Keyboard[key].Values.Any(x => x == character))
                 {
                     return key;
                 }
@@ -98,9 +106,9 @@ namespace OnScreenKeyboard.Application.Business.Keyboard.Requests
 
         private int GetLetterColumn(int row, char character)
         {
-            foreach (var key in _keyboardService.Keyboard[row].Keys)
+            foreach (var key in _keyboard.Keyboard[row].Keys)
             {
-                if (_keyboardService.Keyboard[row][key] == character)
+                if (_keyboard.Keyboard[row][key] == character)
                 {
                     return key;
                 }

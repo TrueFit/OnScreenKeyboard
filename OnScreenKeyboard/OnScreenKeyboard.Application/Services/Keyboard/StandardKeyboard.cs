@@ -2,7 +2,7 @@
 
 namespace OnScreenKeyboard.Application.Services.Keyboard
 {
-    public class StandardKeyboard : IKeyboardService
+    public class StandardKeyboard : IKeyboard
     {
         private Dictionary<int, Dictionary<int, char>> _keyboard;
 
