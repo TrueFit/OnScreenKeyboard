@@ -85,21 +85,21 @@ namespace OnScreenKeyboard.Application.Services.Keyboard
 
                 var column = GetLetterColumn(row, character);
 
-                var horizontalNum = row - currentX;
+                var verticalNum = row - currentY;
 
-                string horizontalDirection = horizontalNum > 0 ? "D" : "U";
-
-                currentLineOutput.AddRange(Enumerable.Repeat(horizontalDirection, Math.Abs(horizontalNum)));
-
-                currentX += horizontalNum;
-
-                var verticalNum = column - currentY;
-
-                string verticalDirection = verticalNum > 0 ? "R" : "L";
+                string verticalDirection = verticalNum > 0 ? "D" : "U";
 
                 currentLineOutput.AddRange(Enumerable.Repeat(verticalDirection, Math.Abs(verticalNum)));
 
                 currentY += verticalNum;
+
+                var horizontalNum = column - currentX;
+
+                string horizontalDirection = horizontalNum > 0 ? "R" : "L";
+
+                currentLineOutput.AddRange(Enumerable.Repeat(horizontalDirection, Math.Abs(horizontalNum)));
+
+                currentX += horizontalNum;
 
                 currentLineOutput.Add("#");
 

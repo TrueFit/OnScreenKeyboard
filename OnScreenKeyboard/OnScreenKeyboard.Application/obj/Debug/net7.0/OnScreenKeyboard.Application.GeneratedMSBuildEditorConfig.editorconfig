@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OnScreenKeyboard.Application
-build_property.ProjectDir = /Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Application/
+build_property.ProjectDir = C:\Projects\OnScreenKeyboard\OnScreenKeyboard\OnScreenKeyboard.Application\

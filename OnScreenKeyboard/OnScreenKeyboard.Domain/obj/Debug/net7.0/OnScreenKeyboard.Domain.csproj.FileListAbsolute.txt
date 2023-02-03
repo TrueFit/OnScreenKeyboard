@@ -10,3 +10,15 @@
 /Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Domain/obj/Debug/net7.0/refint/OnScreenKeyboard.Domain.dll
 /Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Domain/obj/Debug/net7.0/OnScreenKeyboard.Domain.pdb
 /Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Domain/obj/Debug/net7.0/ref/OnScreenKeyboard.Domain.dll
+C:\Projects\OnScreenKeyboard\OnScreenKeyboard\OnScreenKeyboard.Domain\bin\Debug\net7.0\OnScreenKeyboard.Domain.deps.json
+C:\Projects\OnScreenKeyboard\OnScreenKeyboard\OnScreenKeyboard.Domain\bin\Debug\net7.0\OnScreenKeyboard.Domain.dll
+C:\Projects\OnScreenKeyboard\OnScreenKeyboard\OnScreenKeyboard.Domain\bin\Debug\net7.0\OnScreenKeyboard.Domain.pdb
+C:\Projects\OnScreenKeyboard\OnScreenKeyboard\OnScreenKeyboard.Domain\obj\Debug\net7.0\OnScreenKeyboard.Domain.csproj.AssemblyReference.cache
+C:\Projects\OnScreenKeyboard\OnScreenKeyboard\OnScreenKeyboard.Domain\obj\Debug\net7.0\OnScreenKeyboard.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\OnScreenKeyboard\OnScreenKeyboard\OnScreenKeyboard.Domain\obj\Debug\net7.0\OnScreenKeyboard.Domain.AssemblyInfoInputs.cache
+C:\Projects\OnScreenKeyboard\OnScreenKeyboard\OnScreenKeyboard.Domain\obj\Debug\net7.0\OnScreenKeyboard.Domain.AssemblyInfo.cs
+C:\Projects\OnScreenKeyboard\OnScreenKeyboard\OnScreenKeyboard.Domain\obj\Debug\net7.0\OnScreenKeyboard.Domain.csproj.CoreCompileInputs.cache
+C:\Projects\OnScreenKeyboard\OnScreenKeyboard\OnScreenKeyboard.Domain\obj\Debug\net7.0\OnScreenKeyboard.Domain.dll
+C:\Projects\OnScreenKeyboard\OnScreenKeyboard\OnScreenKeyboard.Domain\obj\Debug\net7.0\refint\OnScreenKeyboard.Domain.dll
+C:\Projects\OnScreenKeyboard\OnScreenKeyboard\OnScreenKeyboard.Domain\obj\Debug\net7.0\OnScreenKeyboard.Domain.pdb
+C:\Projects\OnScreenKeyboard\OnScreenKeyboard\OnScreenKeyboard.Domain\obj\Debug\net7.0\ref\OnScreenKeyboard.Domain.dll

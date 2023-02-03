@@ -8,26 +8,37 @@
     "net7.0": []
   },
   "packageFolders": {
-    "/Users/cliffordbateman/.nuget/packages/": {}
+    "C:\\Users\\cbateman\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Domain/OnScreenKeyboard.Domain.csproj",
+      "projectUniqueName": "C:\\Projects\\OnScreenKeyboard\\OnScreenKeyboard\\OnScreenKeyboard.Domain\\OnScreenKeyboard.Domain.csproj",
       "projectName": "OnScreenKeyboard.Domain",
-      "projectPath": "/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Domain/OnScreenKeyboard.Domain.csproj",
-      "packagesPath": "/Users/cliffordbateman/.nuget/packages/",
-      "outputPath": "/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Domain/obj/",
+      "projectPath": "C:\\Projects\\OnScreenKeyboard\\OnScreenKeyboard\\OnScreenKeyboard.Domain\\OnScreenKeyboard.Domain.csproj",
+      "packagesPath": "C:\\Users\\cbateman\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\OnScreenKeyboard\\OnScreenKeyboard\\OnScreenKeyboard.Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/Users/cliffordbateman/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\cbateman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "\\\\ssis03\\data\\software\\packages": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/jint/api/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
@@ -60,7 +71,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

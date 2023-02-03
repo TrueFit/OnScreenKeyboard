@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0v3+PQhoCyNwxk/fI/ZTiRVn5MLIl6APuqziug8W2jnhWadnDhy2B1A+Yh+N8ej17hIzyPA1bs2L1VE3n5Mamw==",
+  "dgSpecHash": "EFb2vDncSgFmPwqJDtghaqEzIksQ6vmxT5SHSiXmDEnEiuZ7QKRgEJZh6wsprCNUJtaYCxybZ4hNBvmc/Yx8jA==",
   "success": true,
-  "projectFilePath": "/Users/cliffordbateman/Projects/onscreenkeyboard/OnScreenKeyboard/OnScreenKeyboard/OnScreenKeyboard.Domain/OnScreenKeyboard.Domain.csproj",
+  "projectFilePath": "C:\\Projects\\OnScreenKeyboard\\OnScreenKeyboard\\OnScreenKeyboard.Domain\\OnScreenKeyboard.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
