@@ -1,0 +1,16 @@
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\bin\Debug\net5.0\OnScreenKeyboard.exe
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\bin\Debug\net5.0\OnScreenKeyboard.deps.json
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\bin\Debug\net5.0\OnScreenKeyboard.runtimeconfig.json
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\bin\Debug\net5.0\OnScreenKeyboard.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\bin\Debug\net5.0\OnScreenKeyboard.dll
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\bin\Debug\net5.0\ref\OnScreenKeyboard.dll
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\bin\Debug\net5.0\OnScreenKeyboard.pdb
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\obj\Debug\net5.0\OnScreenKeyboard.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\obj\Debug\net5.0\OnScreenKeyboard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\obj\Debug\net5.0\OnScreenKeyboard.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\obj\Debug\net5.0\OnScreenKeyboard.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\obj\Debug\net5.0\OnScreenKeyboard.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\obj\Debug\net5.0\OnScreenKeyboard.dll
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\obj\Debug\net5.0\ref\OnScreenKeyboard.dll
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\obj\Debug\net5.0\OnScreenKeyboard.pdb
+C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\obj\Debug\net5.0\OnScreenKeyboard.genruntimeconfig.cache
