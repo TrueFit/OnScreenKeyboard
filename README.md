@@ -1,14 +1,16 @@
+## Zach Albert Comments
 Hello and thanks for checking out my take home test for the on screen keyboard.
 
 My project is a c# console application that I created in Visual Studio. The applicaiton takes 1 argument on startup.  The argument is the InputFile you would like the program to process.  The output is currently just a textFile that writes to the local directory
 
 Feel free to run the application from the exe in the release folder or debug the application from visual studio
--To run the exe of the application:  navigate to OnScreenKeyboard\OnScreenKeyboard\bin\Release\net5.0.  Run the exe with an argument that is the path to your Input File.  For Example:   .\OnScreenKeyboard.exe "C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\InputFile.txt"
+1. To run the exe of the application:  navigate to OnScreenKeyboard\OnScreenKeyboard\bin\Release\net5.0.  Run the exe with an argument that is the path to your Input File.  
+    1. For Example:   .\OnScreenKeyboard.exe "C:\Users\Administrator\Desktop\TruFitCodingTakeHome\OnScreenKeyboard\OnScreenKeyboard\InputFile.txt"
 
 Things to note/areas of interest:
--The program starts and we initalize the keyboard and the keyboard processor.  The processor uses an Interface that the keyboard inherets.  The purpose of this interface is remove the dependency from the processor(processor only cares that there is a keyboard, not the specific keyboard implementation).  This will allow us in the future to create new keyboard classes that have different layouts.  Then on start up we could choose which keyboard we want and the processor would handle it without code changes
--The tests are very minimal, but cover happy path, and some edge cases
--You can see some of the runtime/user tests that I did in the InputFile.txt that I included
+1. The program starts and we initalize the keyboard and the keyboard processor.  The processor uses an Interface that the keyboard inherets.  The purpose of this interface is remove the dependency from the processor(processor only cares that there is a keyboard, not the specific keyboard implementation).  This will allow us in the future to create new keyboard classes that have different layouts.  Then on start up we could choose which keyboard we want and the processor would handle it without code changes
+2. The tests are very minimal, but cover happy path, and some edge cases
+3. You can see some of the runtime/user tests that I did in the InputFile.txt that I included
 
 
 
