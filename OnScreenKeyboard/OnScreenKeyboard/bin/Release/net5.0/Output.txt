@@ -1,0 +1,10 @@
+IT CROWD: D,R,R,#,D,D,L,#,S,U,U,U,R,#,D,D,R,R,R,#,L,L,L,#,D,R,R,#,U,U,U,L,#
+
+iT CrOwD: D,R,R,#,D,D,L,#,S,U,U,U,R,#,D,D,R,R,R,#,L,L,L,#,D,R,R,#,U,U,U,L,#
+
+AAA BBB: #,#,#,S,R,#,#,#
+
+TEST TEST TEST: D,D,D,R,#,U,U,U,R,R,R,#,D,D,D,L,L,L,L,#,R,#,S,#,U,U,U,R,R,R,#,D,D,D,L,L,L,L,#,R,#,S,#,U,U,U,R,R,R,#,D,D,D,L,L,L,L,#,R,#
+
+THE BEST!: There was an error processing the input
+

@@ -10,17 +10,17 @@ namespace OnScreenKeyboard
             KeyboardProcessor keyBoardProcessor = new KeyboardProcessor(keyboard);
 
             System.IO.StreamReader inputFile = new System.IO.StreamReader(args[0]);
-            System.IO.StreamWriter outputWriter;
+            System.IO.StreamWriter outputWriter = new System.IO.StreamWriter("Output.txt");
             string line;
 
-            if (args.Length > 1)
-            {
-                outputWriter = new System.IO.StreamWriter(args[1]);
-            }
-            else
-            {
-                outputWriter = new System.IO.StreamWriter("Output.txt");
-            }
+            //if (args.Length > 1)
+            //{
+            //    outputWriter = new System.IO.StreamWriter(args[1]);
+            //}
+            //else
+            //{
+            //    outputWriter = new System.IO.StreamWriter("Output.txt");
+            //}
 
             while ((line = inputFile.ReadLine()) != null)
             {
